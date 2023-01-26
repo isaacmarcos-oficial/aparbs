@@ -5,9 +5,7 @@ import { Hero } from "../components/Hero";
 import { Offices } from "../components/offices";
 export default function Home() {
   return (
-    <Flex direction="column" align="center" justify="center">
-      <title>APARBS Soluções Automotivas</title>
-      
+    <Flex direction="column" align="center" justify="center">      
       <Hero />
       <Offices />
       <About />
