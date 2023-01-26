@@ -11,6 +11,8 @@ export default class MyDocument extends Document {
           <meta name="description" content="Há mais de 17 anos no mercado atendendo com qualidade, garantindo eficiência em serviços automotivos." />
           
           <meta name="image" content="/AparbsFront.jpg" />
+          <meta name="robots" content="follow" />
+          <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1"></meta>
 
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" /> 
