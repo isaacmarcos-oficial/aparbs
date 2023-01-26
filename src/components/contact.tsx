@@ -19,7 +19,7 @@ export function Contact() {
                 <a href="tel:+5538991060376" target="_blank">
                   <Icon as={FaPhoneAlt} boxSize="1.7rem" _hover={{ color: "primary" }} cursor="pointer" />
                 </a>
-                <a href="https://api.whatsapp.com/send?phone=5538991060376&text=Ol%C3%A1%2C%20estou%20no%20instagram%20da%20APARBS.%20Gostaria%20de%20receber%20atendimento" target="_blank" >
+                <a href="https://api.whatsapp.com/send?phone=5538991060376&text=Ol%C3%A1%2C%20estou%20no%20site%20da%20APARBS.%20Gostaria%20de%20receber%20atendimento" target="_blank" >
                   <Icon as={FaWhatsapp} boxSize="2rem" _hover={{ color: "primary" }} />
                 </a>
                 <a href="https://www.instagram.com/aparbs.oficial/" target="_blank">

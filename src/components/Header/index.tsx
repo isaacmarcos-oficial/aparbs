@@ -8,70 +8,70 @@ export function Header() {
   const btnRef = React.useRef()
 
   return(
-    <Flex position="absolute" align="center" justify="center" h="5rem" my="2rem" w="100%" pb="-5rem" >
-      <Flex maxW="1140px" w="100%" align="center" justify="space-between" m="2rem">
+    <Flex position="absolute" align="center" justify="center" h="80px" my="32px" w="100%" pb="-80px" >
+      <Flex maxW="71.25rem" w="100%" align="center" justify="space-between" m="32px">
 
         <Flex align="center" justify="center" >
           <Box p="-1" as={Link} ref={btnRef} onClick={onOpen} _hover={{ color: "primary" }}>
-            <Icon as={ImMenu} boxSize="1.75rem" />
+            <Icon as={ImMenu} boxSize="28px" />
           </Box>
           <Drawer isOpen={isOpen} onClose={onClose} placement="left" finalFocusRef={btnRef} size="sm">
             <DrawerOverlay/>
-            <DrawerContent bgColor="secundary" h="100%" borderRight="0.25rem" borderColor="primary" borderStyle="outset" >
+            <DrawerContent bgColor="secundary" h="100%" borderRight="4px" borderColor="primary" borderStyle="outset" >
               <DrawerCloseButton color="primary" />
               <DrawerHeader>
-                <Flex align="center" justify="center" mt="3.75rem">
-                  <Img src="/Aparbs Dark 3.svg" h="6rem" />
+                <Flex align="center" justify="center" mt="60px">
+                  <Img src="/Aparbs Dark 3.svg" h="96px" />
                 </Flex>
               </DrawerHeader>
               <DrawerBody >
-                <Flex direction="column" align="center" justify="center" px="2.5rem" w="100%" mb="3rem">
-                  <Text w="100%" fontSize="0.875rem" textTransform="uppercase" textAlign="center" letterSpacing="1.9px" lineHeight="1.3125rem" fontStyle="oblique" mb="3rem"  >
+                <Flex direction="column" align="center" justify="center" px="40px" w="100%" mb="48px">
+                  <Text w="100%" fontSize="14px" textTransform="uppercase" textAlign="center" letterSpacing=".1187rem" lineHeight="21px" fontStyle="oblique" mb="48px"  >
                     O CENTRO AUTOMOTIVO QUE <br/> SEU CARRO SE SENTE SEGURO
                   </Text>
 
-                  <Flex direction="column" w="100%" align="center" mb="3rem" >
-                    <Text color="gray.400" w="100%" fontWeight="bold" mb="0.75rem" fontSize="1.5rem" letterSpacing="0.1rem" align="center" >
+                  <Flex direction="column" w="100%" align="center" mb="48px" >
+                    <Text color="gray.400" w="100%" fontWeight="bold" mb="12px" fontSize="24px" letterSpacing="1.6px" align="center" >
                       Fale Conosco
                     </Text>
                     
-                    <Flex mb="2rem" gap="1rem"  >
+                    <Flex mb="32px" gap="16px"  >
                       <a href="tel:+5538991060376" target="_blank">
-                        <Icon as={FaPhoneAlt} boxSize="1.3rem" _hover={{ color: "primary" }} cursor="pointer" />
+                        <Icon as={FaPhoneAlt} boxSize="20.8px" _hover={{ color: "primary" }} cursor="pointer" />
                       </a>
-                      <a href="https://api.whatsapp.com/send?phone=5538991060376&text=Ol%C3%A1%2C%20estou%20no%20instagram%20da%20APARBS.%20Gostaria%20de%20receber%20atendimento" target="_blank" >
-                        <Icon as={FaWhatsapp} boxSize="1.5rem" _hover={{ color: "primary" }} />
+                      <a href="https://api.whatsapp.com/send?phone=5538991060376&text=Ol%C3%A1%2C%20estou%20no%20site%20da%20APARBS.%20Gostaria%20de%20receber%20atendimento" target="_blank" >
+                        <Icon as={FaWhatsapp} boxSize="24px" _hover={{ color: "primary" }} />
                       </a>
                       <a href="https://www.instagram.com/aparbs.oficial/" target="_blank">
-                        <Icon as={FaInstagram} boxSize="1.3rem" _hover={{ color: "primary" }} />
+                        <Icon as={FaInstagram} boxSize="20.8px" _hover={{ color: "primary" }} />
                       </a>
                       <a href="https://www.facebook.com/aparbs.oficial" target="_blank">
-                        <Icon as={FaFacebook} boxSize="1.3rem" _hover={{ color: "primary" }} />
+                        <Icon as={FaFacebook} boxSize="20.8px" _hover={{ color: "primary" }} />
                       </a>
                       <a href="https://www.linkedin.com/company/aparbs" target="_blank">
-                        <Icon as={FaLinkedin} boxSize="1.3rem" _hover={{ color: "primary" }} />
+                        <Icon as={FaLinkedin} boxSize="20.8px" _hover={{ color: "primary" }} />
                       </a>
                     </Flex>
                   </Flex>
 
-                  <Flex w="100%" bgColor="terciary" py="1rem" borderRadius="3rem 0rem 3rem 0rem "  >
-                    <Text w="100%" fontWeight="600" fontSize="md" textAlign="center" letterSpacing="0.1rem" color="secundary" >
+                  <Flex w="100%" bgColor="terciary" py="16px" borderRadius="48px 0px 48px 0px "  >
+                    <Text w="100%" fontWeight="600" fontSize="md" textAlign="center" letterSpacing="1.6px" color="secundary" >
                       Venha tomar <br/> um café conosco!
                     </Text>
                   </Flex>
 
-                  <Heading w="100%" mt="30px" fontWeight="800" fontSize="md" letterSpacing="0.1rem" color="primary" >
+                  <Heading w="100%" mt="1.875rem" fontWeight="800" fontSize="md" letterSpacing="1.6px" color="primary" >
                     Porteirinha/MG
                   </Heading>
-                  <Text w="100%" mt="4px" fontWeight="300" fontSize="sm" letterSpacing="0.1rem">
+                  <Text w="100%" mt=".25rem" fontWeight="300" fontSize="sm" letterSpacing="1.6px">
                     Avenida Dalton Cunha, 201 <br />
                     Bairro Eldorado <br />
                   </Text>
 
-                  <Heading w="100%" mt="30px" fontWeight="800" fontSize="md" letterSpacing="0.1rem" color="primary" >
+                  <Heading w="100%" mt="1.875rem" fontWeight="800" fontSize="md" letterSpacing="1.6px" color="primary" >
                     Riacho dos Machados/MG
                   </Heading>
-                  <Text w="100%" mt="4px" fontWeight="300" fontSize="sm" letterSpacing="0.1rem">
+                  <Text w="100%" mt=".25rem" fontWeight="300" fontSize="sm" letterSpacing="1.6px">
                     Avenida Salviana Alves da Cruz, 70 <br />
                     Bairro Lourdes <br />
                   </Text>
@@ -83,25 +83,25 @@ export function Header() {
 
         <Flex align="center" justify="left">
           <a href="/">
-          <Img src="/Aparbs Dark 3.svg" h="5rem" />
+          <Img src="/Aparbs Dark 3.svg" h="80px" />
           </a>
         </Flex>
 
-        <Flex gap="1rem" display={{ base: "none", md: "flex" }}  >
+        <Flex gap="16px" display={{ base: "none", md: "flex" }}  >
           <a href="tel:+5538991060376" target="_blank">
-            <Icon as={FaPhoneAlt} boxSize="1.3rem" _hover={{ color: "primary" }} cursor="pointer" />
+            <Icon as={FaPhoneAlt} boxSize="20.8px" _hover={{ color: "primary" }} cursor="pointer" />
           </a>
-          <a href="https://api.whatsapp.com/send?phone=5538991060376&text=Ol%C3%A1%2C%20estou%20no%20instagram%20da%20APARBS.%20Gostaria%20de%20receber%20atendimento" target="_blank" >
-            <Icon as={FaWhatsapp} boxSize="1.5rem" _hover={{ color: "primary" }} />
+          <a href="https://api.whatsapp.com/send?phone=5538991060376&text=Ol%C3%A1%2C%20estou%20no%20site%20da%20APARBS.%20Gostaria%20de%20receber%20atendimento" target="_blank" >
+            <Icon as={FaWhatsapp} boxSize="24px" _hover={{ color: "primary" }} />
           </a>
           <a href="https://www.instagram.com/aparbs.oficial/" target="_blank">
-            <Icon as={FaInstagram} boxSize="1.3rem" _hover={{ color: "primary" }} />
+            <Icon as={FaInstagram} boxSize="20.8px" _hover={{ color: "primary" }} />
           </a>
           <a href="https://www.facebook.com/aparbs.oficial" target="_blank">
-            <Icon as={FaFacebook} boxSize="1.3rem" _hover={{ color: "primary" }} />
+            <Icon as={FaFacebook} boxSize="20.8px" _hover={{ color: "primary" }} />
           </a>
           <a href="https://www.linkedin.com/company/aparbs" target="_blank">
-            <Icon as={FaLinkedin} boxSize="1.3rem" _hover={{ color: "primary" }} />
+            <Icon as={FaLinkedin} boxSize="20.8px" _hover={{ color: "primary" }} />
           </a>
         </Flex>
       </Flex>
