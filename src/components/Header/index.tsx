@@ -1,4 +1,4 @@
-import { Text, Drawer, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, Flex, Img, useDisclosure, DrawerBody, Box, Icon, Link, Heading } from "@chakra-ui/react";
+import { Text, Drawer, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, Flex, Img, useDisclosure, DrawerBody, Box, Icon, Heading } from "@chakra-ui/react";
 import React from "react";
 import { ImMenu } from 'react-icons/im'
 import { FaFacebook, FaInstagram, FaLinkedin, FaPhoneAlt, FaWhatsapp } from 'react-icons/fa'
@@ -12,8 +12,10 @@ export function Header() {
       <Flex maxW="71.25rem" w="100%" align="center" justify="space-between" m="32px">
 
         <Flex align="center" justify="center" >
-          <Box p="-1" as={Link} ref={btnRef} onClick={onOpen} _hover={{ color: "primary" }}>
-            <Icon as={ImMenu} boxSize="28px" />
+          <Box p="-1"  onClick={onOpen} _hover={{ color: "primary" }}>
+            <a ref={btnRef} >
+              <Icon as={ImMenu} boxSize="28px" cursor="pointer" />
+            </a>
           </Box>
           <Drawer isOpen={isOpen} onClose={onClose} placement="left" finalFocusRef={btnRef} size="sm">
             <DrawerOverlay/>
@@ -21,7 +23,7 @@ export function Header() {
               <DrawerCloseButton color="primary" />
               <DrawerHeader>
                 <Flex align="center" justify="center" mt="60px">
-                  <Img src="/Aparbs Dark 3.svg" h="96px" />
+                  <Img src="/Aparbs Dark 3.svg" alt="logo APARBS" h="96px" />
                 </Flex>
               </DrawerHeader>
               <DrawerBody >
@@ -83,7 +85,7 @@ export function Header() {
 
         <Flex align="center" justify="left">
           <a href="/">
-          <Img src="/Aparbs Dark 3.svg" h="80px" />
+          <Img src="/Aparbs Dark 3.svg" w="7.5rem" h="80px" alt="logo APARBS"  />
           </a>
         </Flex>
 

@@ -6,7 +6,7 @@ export function Footer(){
       <Flex display="column" mb="10" align="center" justify="center" >
         <Flex display={{ base:"column", lg:"flex" }} align="center" justify="center">
           <Flex align="center" justify="center" mb={{ base:"1.2rem" }} >
-            <Img src="/Aparbs Dark 3.svg" h="4rem" />
+            <Img src="/Aparbs Dark 3.svg" alt="logo APARBS" h="4rem" />
           </Flex>
           
           <Flex display="column" ml={{ lg: "8" }} textAlign="center" justify="center" fontSize={{ base: "0.5rem", lg: "0.75rem" }}>
