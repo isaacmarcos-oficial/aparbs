@@ -12,9 +12,6 @@ export default function Home() {
       <Hero />
       <Offices />
       <About />
-      <Link href="../pages/sitemap.XML" target="_blank" >
-        Sitemap
-      </Link>
       <Contact />
     </Flex>
   )
