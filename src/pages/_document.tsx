@@ -4,9 +4,7 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head>
-          <title>APARBS Soluções Automotivas</title>
-          
+        <Head>          
           <meta name="description" content="Há mais de 17 anos no mercado atendendo com qualidade, garantindo eficiência em serviços automotivos." />
           
           <meta name="image" content="/AparbsFront.jpg" />
