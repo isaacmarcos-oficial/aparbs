@@ -4,7 +4,7 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head>          
+        <Head>   
           <meta name="description" content="Há mais de 17 anos no mercado atendendo com qualidade, garantindo eficiência em serviços automotivos." />
           
           <meta name="image" content="/AparbsFront.jpg" />
@@ -18,13 +18,14 @@ export default class MyDocument extends Document {
           <meta property="og:url" content="https://aparbs.com.br" />
           <meta property="og:site_name" content="APARBS Soluções Automotivas" />
 
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-WJ87825878">
+          </script>
+
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" /> 
           <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" />
 
           <link rel="shortcut icon" href="/favicon.svg" type="image/svg" />
-
-          
         </Head>
         <body>
           <Main />
