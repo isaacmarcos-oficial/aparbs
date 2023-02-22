@@ -17,14 +17,14 @@ export function Offices() {
           <Services
             image="https://bit.ly/3LGNvnI"
             description="Mecânica em Geral"
-            imageAlt=""
+            imageAlt="Mecânica em Geral"
           />
         </Box>
         <Box>
           <Services
             image="https://bit.ly/3GfiwOz"
             description="Ar Condicionado"
-            imageAlt="ArCondicionado"
+            imageAlt="Ar Condicionado"
           />
         </Box>
         <Box>

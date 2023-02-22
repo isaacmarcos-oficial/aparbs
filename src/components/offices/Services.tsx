@@ -1,5 +1,5 @@
 import { Box, Flex, Img, Text } from "@chakra-ui/react";
-import LazyLoad from 'react-lazyload'
+import LazyLoad from 'react-lazy-load'
 
 interface ServicesProps {
   image: string;
@@ -13,7 +13,7 @@ export function Services({image, description, imageAlt }: ServicesProps){
     <Flex align="center" mb={{ base: "1rem", lg: "4" }} direction="column" justify="space">
       <Box w={{ base:"290px", md:"300px", lg:"250px" }} bgColor="terciary" borderRadius="10" boxShadow="lg" >
         <Flex w="100%" h="150px" bgColor="secundary" borderTopRadius="10" >
-          <LazyLoad height={200} once="true" offset="100" >
+          <LazyLoad height={150} threshold={0.75} >
             <Img src={image} alt={imageAlt} w="20rem" h="100%" objectFit="cover" borderTopRadius="10" />
           </LazyLoad>
         </Flex>

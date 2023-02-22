@@ -3,6 +3,7 @@ import { About } from "../components/about";
 import { Contact } from "../components/contact";
 import { Hero } from "../components/Hero";
 import { Offices } from "../components/offices";
+import { Parceiros } from "../components/parceiros";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero />
       <Offices />
       <About />
+      <Parceiros />
       <Contact />
     </Flex>
   )

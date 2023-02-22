@@ -27,7 +27,7 @@ export function Footer(){
       <Text color="terciary" fontSize="sm" fontWeight="300">
           © Created by
           <Link href="https://www.scdesign.com.br" ml="0.5rem" fontWeight="600" target="_blank" _focus={{ border: "none" }} _hover={{ textDecoration: "none", color: "primary" }}>
-            SC Desin
+            SC Design
           </Link>
       </Text>
     </Flex>
