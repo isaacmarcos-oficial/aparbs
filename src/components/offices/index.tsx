@@ -43,7 +43,7 @@ export function Offices() {
         </Box>
         <Box>
           <Services
-            image="https://bit.ly/3LIJLSK"
+            image="https://media.istockphoto.com/id/1319354325/pt/foto/refueling-and-pouring-oil-quality-into-the-engine-motor-car-transmission-and-maintenance-gear.jpg?b=1&s=170667a&w=0&k=20&c=0rWXtRIA_8xlzCNQTdCUF1fXc0S1pOcHu6j3YVW2QyQ="
             description="Troca de Óleo"
             imageAlt="Troca de Óleo"
           />

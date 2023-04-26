@@ -1,4 +1,4 @@
-import { Text, Drawer, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, Flex, Img, useDisclosure, DrawerBody, Box, Icon, Heading, Link } from "@chakra-ui/react";
+import { Text, Drawer, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, Flex, Img, useDisclosure, DrawerBody, Box, Icon, Heading, Link, SimpleGrid } from "@chakra-ui/react";
 import React from "react";
 import { ImMenu } from 'react-icons/im'
 import { FaFacebook, FaInstagram, FaLinkedin, FaPhoneAlt, FaWhatsapp } from 'react-icons/fa'
@@ -9,9 +9,9 @@ export function Header() {
 
   return(
     <Flex position="absolute" align="center" justify="center" h="80px" my="32px" w="100%" pb="-80px" >
-      <Flex maxW="71.25rem" w="100%" align="center" justify="space-between" m="32px">
+      <SimpleGrid columns={{ lg:3, md:3, base:2 }} maxW="1140" w="100%" m={{ lg:"32px", base:"32px"}} >
 
-        <Flex align="center" justify="center" >
+        <Flex align="center" justify="left" >
           <Box p="-1"  onClick={onOpen} _hover={{ color: "primary" }}>
             <a ref={btnRef} >
               <Icon as={ImMenu} boxSize="28px" cursor="pointer" />
@@ -83,13 +83,13 @@ export function Header() {
           </Drawer>
         </Flex>
 
-        <Flex align="center" justify="left">
+        <Flex align="center" justify={{ lg: "center", md:"center", base:"right"}}>
           <a href="/">
           <Img src="/Aparbs Dark 3.svg" w="7.5rem" h="80px" alt="logo APARBS"  />
           </a>
         </Flex>
 
-        <Flex gap="16px" display={{ base: "none", md: "flex" }}  >
+        <Flex align="center" justify="right" gap="16px" display={{ base: "none", md: "flex" }} >
           <a href="tel:+5538991060376" target="_blank">
             <Icon as={FaPhoneAlt} boxSize="20.8px" _hover={{ color: "primary" }} cursor="pointer" />
           </a>
@@ -106,7 +106,8 @@ export function Header() {
             <Icon as={FaLinkedin} boxSize="20.8px" _hover={{ color: "primary" }} />
           </a>
         </Flex>
-      </Flex>
+
+      </SimpleGrid>
     </Flex>
   )
 }
