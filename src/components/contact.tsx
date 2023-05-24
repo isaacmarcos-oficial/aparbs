@@ -22,10 +22,11 @@ export function Contact() {
               <Flex mb="0.5rem" gap="1rem"  >
                 <LinkIcons/>
               </Flex>
-
-                  <Text color="terciary" fontWeight="600" fontSize={{ base:"1rem", lg:"1.3rem" }} >
+                <Link href="tel:+553832208767" style={{textDecoration:"none"}} isExternal >
+                  <Text color="terciary" _hover={{ color:"primary" }} transition="0.3s" fontWeight="600" fontSize={{ base:"1.25rem", lg:"1.3rem" }} >
                     (38) 3220-8767
                   </Text>
+                </Link>
             </Flex>
 
               <Flex>
@@ -34,16 +35,16 @@ export function Contact() {
                 </Heading>
               </Flex>
               <Flex direction="column" align="center" justify="center" w={{ base:"80%", lg:"60%" }} >
-                <Button as={Link}
+                <Button as={Link} style={{textDecoration:"none"}}
                   href="https://www.google.com/maps/dir//aparbs+porteirinha/@-15.755457,-43.0466363,14.17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x752281b048ee24b:0x8ce9b567298b1724!2m2!1d-43.0311318!2d-15.7536274?hl=pt-br"
-                  target="_blank" leftIcon={<FaMapMarkerAlt />} bgColor="primary" w="100%" mb="2" _hover={{ color: "terciary" }}>
+                  target="_blank" leftIcon={<FaMapMarkerAlt />} bgColor="primary" w="100%" mb="2" _hover={{ bg:"terciary", color:"primary" }} transition="0.3s" >
                   <Text fontSize={{ base:"0.75rem", lg:"1rem" }} >
                     APARBS Porteirinha/MG
                   </Text>
                 </Button>
-                <Button as={Link}
+                <Button as={Link} style={{textDecoration:"none"}}
                   href="https://www.google.com/maps/dir//APARBS+Solu%C3%A7%C3%B5es+Automotivas+-+Avenida+Salviana+Alves+da+Cruz,+70+-+Lourdes,+Riacho+dos+Machados+-+MG,+39529-000/@-16.0021619,-43.1143853,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x75237fd6501ef8f:0x6612bbf2e18cc73a!2m2!1d-43.044517!2d-16.0021732?hl=pt-br"
-                  target="_blank" leftIcon={<FaMapMarkerAlt />} bgColor="primary" w="100%" mb="2" _hover={{ color: "terciary" }}>
+                  target="_blank" leftIcon={<FaMapMarkerAlt />} bgColor="primary" w="100%" mb="2" _hover={{ bg:"terciary", color:"primary" }} transition="0.3s" >
                   <Text fontSize={{ base:"0.75rem", lg:"1rem" }} >
                     APARBS Riacho dos Machados/MG
                   </Text>

@@ -10,7 +10,7 @@ export function Header() {
 
   return(
     <Flex position="absolute" align="center" justify="center" h="80px" my="32px" w="100%" pb="-80px" >
-      <SimpleGrid columns={{ lg:3, md:3, base:2 }} maxW="1140" w="100%" m={{ lg:"32px", base:"32px"}} >
+      <SimpleGrid columns={{ lg:3, md:3, base:2 }} maxW="1140" w="100%" m={{ lg:"32px", base:"32px"}} alignItems="center" >
 
         <Sidebar />
         {/* <Flex align="center" justify="left" >
@@ -77,7 +77,7 @@ export function Header() {
           </a>
         </Flex>
 
-        <Flex align="center" justify="right" >
+        <Flex align="center" justify="right" display={{ md:"flex", base:"none" }} >
           <LinkIcons/>
         </Flex>
 
