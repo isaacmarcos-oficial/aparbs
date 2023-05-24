@@ -6,18 +6,18 @@ export function Footer(){
       <Flex display="column" mb="10" align="center" justify="center" >
         <Flex display={{ base:"column", lg:"flex" }} align="center" justify="center">
           <Flex align="center" justify="center" mb={{ base:"1.2rem" }} >
-            <Img src="/Aparbs Dark 3.svg" alt="logo APARBS" h="4rem" />
+            <Img src="/Aparbs Dark 3.svg" alt="logo APARBS" h="5rem" />
           </Flex>
           
           <Flex display="column" ml={{ lg: "8" }} textAlign="center" justify="center" fontSize={{ base: "0.5rem", lg: "0.75rem" }}>
+            <Text mt="0.75rem" color="primary" fontWeight="800" fontSize={{ base:"1.25rem", lg: "1.5rem" }} >
+              (38) 3220-8767
+            </Text>
             <Text>
               MATRIZ PORTEIRINHA: Av. Dalton Cunha, 201 - Porteirinha, MG, 39520-000
             </Text>
             <Text mt="1">
               FILIAL RIACHO DOS MACHADOS: Av. Salviana Alves da Cruz, 70 - Riacho dos Machados, MG, 39529-000
-            </Text>
-            <Text mt="0.75rem" color="primary" fontWeight="800" fontSize={{ base:"1.25rem", lg: "1.5rem" }} >
-              (38) 3220-8767 / (38) 9 9106-0376
             </Text>
           </Flex>
 

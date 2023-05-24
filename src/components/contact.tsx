@@ -1,5 +1,7 @@
 import { Button, Flex, Heading, Icon, Img, Link, Text } from "@chakra-ui/react";
 import { FaFacebook, FaInstagram, FaLinkedin, FaMapMarkerAlt, FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
+import { LinkIcons } from "./linkIcons";
+
 
 export function Contact() {
   return(
@@ -18,26 +20,12 @@ export function Contact() {
               </Flex>
             <Flex direction="column" align="center" justify="center" mb="3rem">
               <Flex mb="0.5rem" gap="1rem"  >
-                <a href="tel:+5538991060376" target="_blank">
-                  <Icon as={FaPhoneAlt} boxSize="1.7rem" _hover={{ color: "primary" }} cursor="pointer" />
-                </a>
-                <a href="https://api.whatsapp.com/send?phone=5538991060376&text=Ol%C3%A1%2C%20estou%20no%20site%20da%20APARBS.%20Gostaria%20de%20receber%20atendimento" target="_blank" >
-                  <Icon as={FaWhatsapp} boxSize="2rem" _hover={{ color: "primary" }} />
-                </a>
-                <a href="https://www.instagram.com/aparbs.oficial/" target="_blank">
-                  <Icon as={FaInstagram} boxSize="2rem" _hover={{ color: "primary" }} />
-                </a>
-                <a href="https://www.facebook.com/aparbs.oficial" target="_blank">
-                  <Icon as={FaFacebook} boxSize="2rem" _hover={{ color: "primary" }} />
-                </a>
-                <a href="https://www.linkedin.com/company/aparbs" target="_blank">
-                  <Icon as={FaLinkedin} boxSize="2rem" _hover={{ color: "primary" }} />
-                </a>
+                <LinkIcons/>
               </Flex>
-                
-                <Text color="terciary" fontWeight="600" fontSize={{ base:"1rem", lg:"1.3rem" }} >
-                  (38) 3220-8767 / (38) 9 9106-0376
-                </Text>
+
+                  <Text color="terciary" fontWeight="600" fontSize={{ base:"1rem", lg:"1.3rem" }} >
+                    (38) 3220-8767
+                  </Text>
             </Flex>
 
               <Flex>
