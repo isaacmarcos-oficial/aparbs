@@ -25,7 +25,6 @@ export default function Bio() {
           <LinkIcons/>
         </Flex>
 
-
         <Flex flexDir="column" w="100%" maxW="500px" gap="3" mt="3" >
           <Link href="https://www.google.com/maps/dir//aparbs+porteirinha/@-15.755457,-43.0466363,14.17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x752281b048ee24b:0x8ce9b567298b1724!2m2!1d-43.0311318!2d-15.7536274?hl=pt-br" isExternal style={{textDecoration:"none"}} >
             <Box display="flex" w="100%" maxH="60px" minH="60px" bgColor="primary" p="6px" alignItems="center" gap="15px" borderRadius="5" _hover={{ bgColor:"secundary" }} transition="0.3s" >
@@ -47,8 +46,15 @@ export default function Bio() {
                 Rota para a APARBS em Riacho dos Machados/MG
               </Text>
             </Box>
+
           </Link>
         </Flex>
+        
+        <Link mt="8" style={{ textDecoration:"none" }} >
+          <Text _hover={{ color: "primary", fontWeight:"600" }} fontSize=".875rem" >
+            IR PARA O SITE 
+          </Text>
+        </Link>
 
       </Flex>
     </Flex>
