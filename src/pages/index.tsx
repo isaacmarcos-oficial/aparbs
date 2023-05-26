@@ -10,9 +10,8 @@ import { Footer } from "../components/Footer";
 export default function Home() {
   return (
     <Flex direction="column" align="center" justify="center">      
-      <title>APARBS Soluções Automotivas</title>
       <Flex w="100%"  >
-        <Header />
+      <Header />
       </Flex>
       <Hero />
       <Offices />

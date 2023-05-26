@@ -1,7 +1,6 @@
 import { Box, Flex, Image, Heading, Text, Icon, Link } from "@chakra-ui/react";
 import { HiMapPin } from 'react-icons/hi2'
 import { LinkIcons } from "../../components/linkIcons";
-import { useEffect } from "react";
 
 export default function Bio() {
   
@@ -27,7 +26,7 @@ export default function Bio() {
 
         <Flex flexDir="column" w="100%" maxW="500px" gap="3" mt="3" >
           <Link href="https://www.google.com/maps/dir//aparbs+porteirinha/@-15.755457,-43.0466363,14.17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x752281b048ee24b:0x8ce9b567298b1724!2m2!1d-43.0311318!2d-15.7536274?hl=pt-br" isExternal style={{textDecoration:"none"}} >
-            <Box display="flex" w="100%" maxH="60px" minH="60px" bgColor="primary" p="6px" alignItems="center" gap="15px" borderRadius="5" _hover={{ bgColor:"secundary" }} transition="0.3s" >
+            <Box display="flex" w="100%" maxH="60px" minH="60px" bgColor="primary" p="6px" alignItems="center" gap="15px" borderRadius="5" _hover={{ bgColor:"terciary", color:"primary" }} transition="0.3s" >
               <Box display="flex" minW="50px" minH="50px" borderRadius="5" bgColor="terciary" alignItems="center" justifyContent="center" >
                 <Icon as={HiMapPin} boxSize="2rem" color="primary" />
               </Box>
@@ -38,7 +37,7 @@ export default function Bio() {
           </Link>
 
           <Link style={{textDecoration:"none"}}  href="https://www.google.com/maps/dir//APARBS+Solu%C3%A7%C3%B5es+Automotivas+-+Avenida+Salviana+Alves+da+Cruz,+70+-+Lourdes,+Riacho+dos+Machados+-+MG,+39529-000/@-16.0021619,-43.1143853,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x75237fd6501ef8f:0x6612bbf2e18cc73a!2m2!1d-43.044517!2d-16.0021732?hl=pt-br" isExternal >
-            <Box display="flex" w="100%" maxH="60px" minH="60px" bgColor="primary" p="6px" alignItems="center" gap="15px" borderRadius="5" _hover={{ bgColor:"secundary" }} transition="0.3s" >
+            <Box display="flex" w="100%" maxH="60px" minH="60px" bgColor="primary" p="6px" alignItems="center" gap="15px" borderRadius="5" _hover={{ bgColor:"terciary", color:"primary" }} transition="0.3s" >
               <Box display="flex" minW="50px" minH="50px" borderRadius="5" bgColor="terciary" alignItems="center" justifyContent="center"  >
                 <Icon as={HiMapPin} boxSize="2rem" color="primary" />
               </Box>
@@ -50,7 +49,7 @@ export default function Bio() {
           </Link>
         </Flex>
         
-        <Link mt="8" style={{ textDecoration:"none" }} >
+        <Link href="/" mt="8" style={{ textDecoration:"none" }} >
           <Text _hover={{ color: "primary", fontWeight:"600" }} fontSize=".875rem" >
             IR PARA O SITE 
           </Text>

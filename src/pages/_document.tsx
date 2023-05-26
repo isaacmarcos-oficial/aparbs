@@ -5,6 +5,8 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>   
+          <title>APARBS Soluções Automotivas</title>
+          
           <meta name="description" content="Há mais de 17 anos no mercado atendendo com qualidade, garantindo eficiência em serviços automotivos." />
           <meta name="meta keywords" content="Oficina mecânica, Loja de peças, Autopeças, Serviços automotivos, Reparo de carros, Troca de óleo, Mecânico de automóveis, Suspensão de carro, Freios para carros, Escapamentos, Revisão automotiva, Diagnóstico de problemas mecânicos" />
           
