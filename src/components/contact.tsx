@@ -10,7 +10,7 @@ export function Contact() {
         <Flex w={{ base:"85%", lg: "75%"}} display="column">
           
           <Flex>
-            <Flex align="center" justify="center" direction="column" w={{ base:"100%", lg:"50%" }} h={{ base:"400px", lg:"600px" }} bgColor="secundary" >
+            <Flex align="center" justify="center" direction="column" w={{ base:"100%", lg:"60%" }} h={{ base:"400px", lg:"600px" }} bgColor="secundary" >
               <Flex>
                 <Heading mb="1rem" color="primary">
                   <a href="#faleconosco">
@@ -51,8 +51,8 @@ export function Contact() {
                 </Button>
               </Flex>
             </Flex>
-            <Flex display={{ base:"none", lg:"flex" }} align="center" justify="center" w="50%" h="600px" bgColor="primary">
-              <Img w="100%" h="600px" src="https://bit.ly/3yVZvPD" alt="Uma engrenagem" objectFit="cover" />
+            <Flex display={{ base:"none", lg:"flex" }} align="center" justify="center" w="40%" h="600px" bgColor="primary">
+              <Img w="100%" h="600px" src="/Arthur.jpg" alt="Uma engrenagem" objectFit="cover" />
             </Flex>
           </Flex>
         </Flex>
