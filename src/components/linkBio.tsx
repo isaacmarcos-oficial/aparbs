@@ -1,19 +1,21 @@
 import { Icon, Box, Link, Text } from "@chakra-ui/react";
+import { useState } from "react";
 import { IconType } from "react-icons";
 import { HiMapPin } from "react-icons/hi2";
 
 interface LinkBioProps {
   title: string;
   adress: string;
-  iconLink: IconType
+  iconLink: IconType;
 }
 
-export function LinkBio({adress, iconLink, title}: LinkBioProps) {
+export function LinkBio({ adress, iconLink, title }: LinkBioProps) {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
-    <Link
-      style={{ textDecoration: "none" }}
-      href={adress}
-      isExternal
+    <Link style={{ textDecoration: "none" }} href={adress} isExternal
+    onMouseEnter={() => setIsHovered(true)}
+    onMouseLeave={() => setIsHovered(false)}
     >
       <Box
         display="flex"
@@ -37,9 +39,14 @@ export function LinkBio({adress, iconLink, title}: LinkBioProps) {
           bgColor="terciary"
           alignItems="center"
           justifyContent="center"
-          _hover={{ color: "primary" }}
+          _hover={{
+            color: "primary",
+            "&:hover svg": {
+              color: "primary",
+            },
+          }}
         >
-          <Icon as={iconLink} boxSize="2rem" color="primary" />
+          <Icon as={iconLink} boxSize="2rem" color={isHovered ? "secundary" : "primary"} transition="0.5s" />
         </Box>
         <Text fontSize="16px" fontWeight="500">
           {title}
