@@ -1,8 +1,9 @@
 import { Box, Flex, Image, Heading, Text, Icon, Link } from "@chakra-ui/react";
 import { BsTruckFlatbed } from "react-icons/bs";
 import { HiMapPin } from "react-icons/hi2";
-import { SlUserFemale } from "react-icons/sl";
+import { AiOutlineWhatsApp } from "react-icons/ai";
 import { LinkIcons } from "../../components/linkIcons";
+import { LinkBio } from "../../components/linkBio";
 
 export default function Bio() {
   return (
@@ -11,14 +12,14 @@ export default function Bio() {
       justify="center"
       bgImg="Fachada.jpg"
       bgSize="cover"
-      bgColor="#000000f2"
+      bgColor="#000000e9"
       bgBlendMode="overlay"
     >
       <Flex
         flexDir="column"
         w="100%"
         maxW="540px"
-        bgColor="secundary"
+        bgColor="primary"
         minH="100vh"
         align="center"
         px="40px"
@@ -64,150 +65,33 @@ export default function Bio() {
         </Flex>
 
         <Flex flexDir="column" w="100%" maxW="500px" gap="3" mt="3">
-          <Link
-            style={{ textDecoration: "none" }}
-            href="https://www.sympla.com.br/evento/oficina-rosa-conhecendo-seu-veiculo/2220495"
-            isExternal
-          >
-            <Box
-              display="flex"
-              w="100%"
-              maxH="60px"
-              minH="60px"
-              bgColor="pink.500"
-              p="6px"
-              alignItems="center"
-              gap="15px"
-              borderRadius="5"
-              _hover={{ bgColor: "terciary", color: "pink.500" }}
-              transition="0.3s"
-            >
-              <Box
-                display="flex"
-                minW="50px"
-                minH="50px"
-                borderRadius="5"
-                bgColor="terciary"
-                alignItems="center"
-                justifyContent="center"
-              >
-                <Icon as={SlUserFemale} boxSize="2rem" color="pink.500" />
-              </Box>
-              <Text fontSize="16px" fontWeight="500">
-                WorkShop Oficina Rosa
-              </Text>
-            </Box>
-          </Link>
+          <LinkBio
+            title="Fale conosco"
+            adress="https://api.whatsapp.com/send?phone=5538999944889&text=Olá%2C estou no site da APARBS. Gostaria de receber atendimento"
+            iconLink={AiOutlineWhatsApp}
+          />
+          <LinkBio
+            title="APARBS Porteirinha/MG"
+            adress="https://www.google.com/maps/dir//aparbs+porteirinha/@-15.755457,-43.0466363,14.17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x752281b048ee24b:0x8ce9b567298b1724!2m2!1d-43.0311318!2d-15.7536274?hl=pt-br"
+            iconLink={HiMapPin}
+          />
 
-          <Link
-            style={{ textDecoration: "none" }}
-            href="https://www.google.com/maps/dir//aparbs+porteirinha/@-15.755457,-43.0466363,14.17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x752281b048ee24b:0x8ce9b567298b1724!2m2!1d-43.0311318!2d-15.7536274?hl=pt-br"
-            isExternal
-          >
-            <Box
-              display="flex"
-              w="100%"
-              maxH="60px"
-              minH="60px"
-              bgColor="primary"
-              p="6px"
-              alignItems="center"
-              gap="15px"
-              borderRadius="5"
-              _hover={{ bgColor: "terciary", color: "primary" }}
-              transition="0.3s"
-            >
-              <Box
-                display="flex"
-                minW="50px"
-                minH="50px"
-                borderRadius="5"
-                bgColor="terciary"
-                alignItems="center"
-                justifyContent="center"
-              >
-                <Icon as={HiMapPin} boxSize="2rem" color="primary" />
-              </Box>
-              <Text fontSize="16px" fontWeight="500">
-                APARBS Porteirinha/MG
-              </Text>
-            </Box>
-          </Link>
+          <LinkBio
+            title="APARBS Riacho dos Machados/MG"
+            adress="https://www.google.com/maps/dir//APARBS+Solu%C3%A7%C3%B5es+Automotivas+-+Avenida+Salviana+Alves+da+Cruz,+70+-+Lourdes,+Riacho+dos+Machados+-+MG,+39529-000/@-16.0021619,-43.1143853,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x75237fd6501ef8f:0x6612bbf2e18cc73a!2m2!1d-43.044517!2d-16.0021732?hl=pt-br"
+            iconLink={HiMapPin}
+          />
 
-          <Link
-            style={{ textDecoration: "none" }}
-            href="https://www.google.com/maps/dir//APARBS+Solu%C3%A7%C3%B5es+Automotivas+-+Avenida+Salviana+Alves+da+Cruz,+70+-+Lourdes,+Riacho+dos+Machados+-+MG,+39529-000/@-16.0021619,-43.1143853,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x75237fd6501ef8f:0x6612bbf2e18cc73a!2m2!1d-43.044517!2d-16.0021732?hl=pt-br"
-            isExternal
-          >
-            <Box
-              display="flex"
-              w="100%"
-              maxH="60px"
-              minH="60px"
-              bgColor="primary"
-              p="6px"
-              alignItems="center"
-              gap="15px"
-              borderRadius="5"
-              _hover={{ bgColor: "terciary", color: "primary" }}
-              transition="0.3s"
-            >
-              <Box
-                display="flex"
-                minW="50px"
-                minH="50px"
-                borderRadius="5"
-                bgColor="terciary"
-                alignItems="center"
-                justifyContent="center"
-              >
-                <Icon as={HiMapPin} boxSize="2rem" color="primary" />
-              </Box>
-              <Text fontSize="16px" fontWeight="500">
-                APARBS Riacho dos Machados/MG
-              </Text>
-            </Box>
-          </Link>
-
-          <Link
-            style={{ textDecoration: "none" }}
-            href="https://api.whatsapp.com/send?phone=5538999944889&text=Olá%2C estou no site da APARBS. Gostaria de receber atendimento"
-            isExternal
-          >
-            <Box
-              display="flex"
-              w="100%"
-              maxH="60px"
-              minH="60px"
-              bgColor="primary"
-              p="6px"
-              alignItems="center"
-              gap="15px"
-              borderRadius="5"
-              _hover={{ bgColor: "terciary", color: "primary" }}
-              transition="0.3s"
-            >
-              <Box
-                display="flex"
-                minW="50px"
-                minH="50px"
-                borderRadius="5"
-                bgColor="terciary"
-                alignItems="center"
-                justifyContent="center"
-              >
-                <Icon as={BsTruckFlatbed} boxSize="2rem" color="primary" />
-              </Box>
-              <Text fontSize="16px" fontWeight="500">
-                APARBS Auto Socorro
-              </Text>
-            </Box>
-          </Link>
+          <LinkBio
+            title="APARBS Auto Socorro"
+            adress="https://api.whatsapp.com/send?phone=5538999944889&text=Olá%2C estou no site da APARBS. Gostaria de receber atendimento"
+            iconLink={BsTruckFlatbed}
+          />
         </Flex>
 
         <Link href="/" mt="8" style={{ textDecoration: "none" }}>
           <Text
-            _hover={{ color: "primary", fontWeight: "600" }}
+            _hover={{ color: "secundary", fontWeight: "600" }}
             fontSize=".875rem"
           >
             IR PARA O SITE
