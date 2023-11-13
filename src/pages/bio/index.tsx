@@ -67,7 +67,7 @@ export default function Bio() {
         <Flex flexDir="column" w="100%" maxW="500px" gap="3" mt="3">
           <LinkBio
             title="Fale conosco"
-            adress="https://api.whatsapp.com/send?phone=5538999944889&text=Olá%2C estou no site da APARBS. Gostaria de receber atendimento"
+            adress="https://api.whatsapp.com/send?phone=553832208767&text=Olá%2C estou no site da APARBS. Gostaria de receber atendimento"
             iconLink={AiOutlineWhatsApp}
           />
           <LinkBio
