@@ -4,7 +4,11 @@ export const theme = extendTheme ({
   colors:{
     primary: '#D90000',
     secundary: '#0D1214',
-    terciary: '#EDF6F9'
+    terciary: '#EDF6F9',
+    
+    gray: {
+      900: "#0D1214",
+    },
   },
 
   backgroundImage: {
@@ -12,15 +16,15 @@ export const theme = extendTheme ({
   },
 
   fonts:{
-    heading: 'Montserrat, sans-serif',
-    body: 'Montserrat, sans-serif'
+    heading: 'Poppins, sans-serif',
+    body: 'Poppins, sans-serif'
   },
 
 	styles: {
     global: {
       body: {
-        bg: '#0D1214',
-        color: 'gray.50'
+        bg: 'White',
+        color: 'white'
       },
       ".swiper-button-next": {
         right: [8, 10],

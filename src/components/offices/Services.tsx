@@ -1,27 +1,75 @@
-import { Box, Flex, Img, Text } from "@chakra-ui/react";
-import LazyLoad from 'react-lazy-load'
+import {
+  Flex,
+  Text,
+  Heading,
+  Icon as ChakraIcon,
+  useDisclosure,
+  Button,
+  Modal,
+  ModalBody,
+  ModalCloseButton,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+  ModalOverlay,
+} from "@chakra-ui/react";
+import { useState } from "react";
+import { IconType } from "react-icons";
+import { OfficeModal } from "./officeModal";
 
 interface ServicesProps {
-  image: string;
-  imageAlt: string;
-  description: string;
+  title: string;
+  description?: string;
+  serviceIcon: IconType;
   children?: [];
 }
 
-export function Services({image, description, imageAlt }: ServicesProps){
-  return(
-    <Flex align="center" mb={{ base: "1rem", lg: "4" }} direction="column" justify="space">
-      <Box w={{ base:"290px", md:"300px", lg:"250px" }} bgColor="terciary" borderRadius="10" boxShadow="lg" >
-        <Flex w="100%" h="150px" bgColor="secundary" borderTopRadius="10" >
-          <LazyLoad height={150} threshold={0.75} >
-            <Img src={image} alt={imageAlt} w="20rem" h="100%" objectFit="cover" borderTopRadius="10" />
-          </LazyLoad>
-        </Flex>
-        <Text w="100%" textAlign="center" my="0.5rem" fontWeight="600" letterSpacing="0.05rem" color="primary" fontSize={{ base:"0.9rem", lg:"1rem" }} >
+export function Services({ title, serviceIcon, description }: ServicesProps) {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
+  return (
+    <Flex
+      gap={3}
+      direction="row-reverse"
+      onClick={onOpen}
+      cursor="pointer"
+    >
+      <Modal isOpen={isOpen} onClose={onClose} isCentered>
+        <ModalOverlay />
+        <ModalContent color="gray.800" >
+          <ModalHeader color="primary" >{title}</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>{description}</ModalBody>
+
+          <ModalFooter>
+            <Button mr={3} onClick={onClose}>
+              Fechar
+            </Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
+
+      <Flex direction="column" flex="1">
+        <Heading color="primary" fontSize="18px">
+          {title}
+        </Heading>
+        <Text color="gray.600" fontWeight="400" fontSize="14px">
           {description}
         </Text>
-      </Box>
-        
+      </Flex>
+      <Flex
+        color= "primary"
+        _hover={{ color:"terciary", bg:"primary" }}
+        boxSize="80px"
+        border="2px solid"
+        borderColor="primary"
+        align="center"
+        justify="center"
+        rounded="md"
+        transition="0.5s"
+      >
+        <ChakraIcon as={serviceIcon} boxSize="35px" />
+      </Flex>
     </Flex>
-  )
+  );
 }

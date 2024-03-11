@@ -22,8 +22,8 @@ interface ServicesProps {
 export function Parceiros() {
 
   return(
-    <Flex direction="column" w="100%" align="center" justify="center" bgColor="gray.200"  py="3rem">
-      <Flex w="100%" direction="column" align="center" justify="center" maxW="1140px" px="2rem" >
+    <Flex direction="column" w="100%" align="center" justify="center"  py="3rem">
+      <Flex w="100%" direction="column" align="center" justify="center" maxW="1140px" >
         <Heading color="primary" mb="2rem" >
           <a href="#NossosServicos">
             Nossos Clientes
@@ -31,11 +31,10 @@ export function Parceiros() {
         </Heading>
       </Flex>
 
-      <Flex w="100%" maxW="1140px" wrap="wrap" justify={{ lg:"space-between", md: "space-around", base:"space-around"}} gap="1.5rem" px="2rem">
+      <Flex w="100%" maxW="1280px" wrap="wrap" justify={{ lg:"space-between", md: "space-around", base:"space-around"}} gap="1.5rem">
         <Swiper
           modules={[ Autoplay, Pagination, Navigation ]}
           slidesPerView={4}
-          spaceBetween={30}
           loop={true}
           grabCursor={true}
           loopedSlides={4}
@@ -92,6 +91,18 @@ export function Parceiros() {
             />
           </SwiperSlide>
           
+          <SwiperSlide>
+            <BusinessLogos
+              LogoImage="/Business/breve.png"
+              LogoAlt="Em Breve"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <BusinessLogos
+              LogoImage="/Business/breve.png"
+              LogoAlt="Em Breve"
+            />
+          </SwiperSlide>
           <SwiperSlide>
             <BusinessLogos
               LogoImage="/Business/breve.png"
