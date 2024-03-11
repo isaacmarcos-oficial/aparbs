@@ -126,7 +126,7 @@ export function Contact() {
                 <Img
                   w="100%"
                   h="100%"
-                  src="/Arthur.jpg"
+                  src="/Camada 2.jpg"
                   alt="Uma engrenagem"
                   objectFit="cover"
                   objectPosition="80%"
