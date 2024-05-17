@@ -1,7 +1,7 @@
 import { Box, Flex, Image, Heading, Text, Icon, Link } from "@chakra-ui/react";
 import { BsTruckFlatbed } from "react-icons/bs";
 import { HiMapPin } from "react-icons/hi2";
-import { AiOutlineWhatsApp } from "react-icons/ai";
+import { AiOutlineSolution, AiOutlineWhatsApp } from "react-icons/ai";
 import { LinkIcons } from "../../components/linkIcons";
 import { LinkBio } from "../../components/linkBio";
 
@@ -83,9 +83,15 @@ export default function Bio() {
           />
 
           <LinkBio
-            title="APARBS Auto Socorro"
+            title="APARBS Transportes"
             adress="https://api.whatsapp.com/send?phone=5538999944889&text=Olá%2C estou no site da APARBS. Gostaria de receber atendimento"
             iconLink={BsTruckFlatbed}
+          />
+
+          <LinkBio
+            title="Trabalhe conosco"
+            adress="https://forms.gle/r869Qa7dZvVZHHhd8"
+            iconLink={AiOutlineSolution }
           />
         </Flex>
 
