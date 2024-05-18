@@ -11,12 +11,26 @@ import 'swiper/css/navigation';
 
 import { Autoplay, Navigation, Pagination } from "swiper";
 
-interface ServicesProps {
-  image: string;
-  imageAlt: string;
-  description: string;
-  children?: [];
+interface LogoData {
+  LogoImage: string;
+  LogoAlt: string;
 }
+
+const logoData: LogoData[] = [
+  { LogoImage: "/Business/copasa.png", LogoAlt: "Copasa" },
+  { LogoImage: "/Business/cemig.png", LogoAlt: "Cemig" },
+  { LogoImage: "/Business/localiza.png", LogoAlt: "Localiza" },
+  { LogoImage: "/Business/unidas.png", LogoAlt: "Unidas" },
+  { LogoImage: "/Business/prefPorteirinha.png", LogoAlt: "Prefeitura da Porteirinha" },
+  { LogoImage: "/Business/prefSerranopolis.png", LogoAlt: "Prefeitura de Serranópolis" },
+  { LogoImage: "/Business/mrdm.png", LogoAlt: "Mineradora Riacho dos Machados" },
+  { LogoImage: "/Business/pmmg.png", LogoAlt: "Policial Militar de Minas Gerais" },
+  { LogoImage: "/Business/seteLoc.png", LogoAlt: "Sete Loc" },
+  { LogoImage: "/Business/control.png", LogoAlt: "Control" },
+  { LogoImage: "/Business/orica.png", LogoAlt: "Orica" },
+  { LogoImage: "/Business/armac.png", LogoAlt: "Armac" },
+  { LogoImage: "/Business/extraBom.png", LogoAlt: "Extra Bom Supermercado" },
+];
 
 
 export function Parceiros() {
@@ -31,10 +45,11 @@ export function Parceiros() {
         </Heading>
       </Flex>
 
-      <Flex w="100%" maxW="1280px" wrap="wrap" justify={{ lg:"space-between", md: "space-around", base:"space-around"}} gap="1.5rem">
+      <Flex w="100%" maxW="1280px" wrap="wrap" justify={{ lg:"space-between", md: "space-around", base:"space-around"}} gap="1.5rem" px={{ lg: "none", md:"8", base: "4" }}>
         <Swiper
           modules={[ Autoplay, Pagination, Navigation ]}
-          slidesPerView={4}
+          slidesPerView={5}
+          spaceBetween={0}
           loop={true}
           grabCursor={true}
           loopedSlides={4}
@@ -42,73 +57,83 @@ export function Parceiros() {
           speed={5000}
           className="mySwiper"
         >
-          <SwiperSlide>
+          
+          {logoData.map((logo, index) => (
+            <SwiperSlide key={index}>
+              <BusinessLogos LogoImage={logo.LogoImage} LogoAlt={logo.LogoAlt} />
+            </SwiperSlide>
+          ))}
+
+          {/* <SwiperSlide>
             <BusinessLogos
-              LogoImage="/Business/breve.png"
-              LogoAlt="Em Breve"
+              LogoImage="/Business/copasa.png"
+              LogoAlt="Copasa"
             />
           </SwiperSlide>
           
           <SwiperSlide>
             <BusinessLogos
-              LogoImage="/Business/breve.png"
-              LogoAlt="Em Breve"
+              LogoImage="/Business/cemig.png"
+              LogoAlt="Cemig"
             />
           </SwiperSlide>
           
           <SwiperSlide>
             <BusinessLogos
-              LogoImage="/Business/breve.png"
-              LogoAlt="Em Breve"
+              LogoImage="/Business/localiza.png"
+              LogoAlt="Localiza"
             />
           </SwiperSlide>
           
           <SwiperSlide>
             <BusinessLogos
-              LogoImage="/Business/breve.png"
-              LogoAlt="Em Breve"
+              LogoImage="/Business/unidas.png"
+              LogoAlt="Unidas"
             />
           </SwiperSlide>
           
           <SwiperSlide>
             <BusinessLogos
-              LogoImage="/Business/breve.png"
-              LogoAlt="Em Breve"
+              LogoImage="/Business/prefPorteirinha.png"
+              LogoAlt="Prefeitura da Porteirinha"
             />
           </SwiperSlide>
           
           <SwiperSlide>
             <BusinessLogos
-              LogoImage="/Business/breve.png"
-              LogoAlt="Em Breve"
+              LogoImage="/Business/prefSerranopolis.png"
+              LogoAlt="Prefeitura de Serranópolis"
             />
           </SwiperSlide>
           
           <SwiperSlide>
             <BusinessLogos
-              LogoImage="/Business/breve.png"
-              LogoAlt="Em Breve"
+              LogoImage="/Business/mrdm.png"
+              LogoAlt="Mineradora Riacho dos Machados"
             />
           </SwiperSlide>
           
           <SwiperSlide>
             <BusinessLogos
-              LogoImage="/Business/breve.png"
-              LogoAlt="Em Breve"
+              LogoImage="/Business/pmmg.png"
+              LogoAlt="Policial Militar MG"
             />
           </SwiperSlide>
+
           <SwiperSlide>
             <BusinessLogos
-              LogoImage="/Business/breve.png"
-              LogoAlt="Em Breve"
+              LogoImage="/Business/seteLoc.png"
+              LogoAlt="Sete Loc"
             />
           </SwiperSlide>
+
           <SwiperSlide>
             <BusinessLogos
-              LogoImage="/Business/breve.png"
-              LogoAlt="Em Breve"
+              LogoImage="/Business/control.png"
+              LogoAlt="Control"
             />
-          </SwiperSlide>
+          </SwiperSlide> */}
+
         </Swiper>
       </Flex>      
     </Flex>
