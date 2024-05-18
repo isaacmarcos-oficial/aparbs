@@ -25,7 +25,7 @@ export function About() {
         </Heading>
 
         <Text fontSize="1rem" fontWeight="500" w={{ base: "100%", md: "50%" }}>
-          Há mais de 17 anos no mercado atendendo com qualidade, garantindo
+          Há mais de 25 anos no mercado atendendo com qualidade, garantindo
           eficiência em serviços automotivos.
         </Text>
       </Flex>
