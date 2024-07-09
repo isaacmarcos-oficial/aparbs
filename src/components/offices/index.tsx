@@ -11,6 +11,7 @@ import {
   FaWrench,
 } from "react-icons/fa";
 import { BsTruckFlatbed } from "react-icons/bs";
+import { arCondicionado, autoPecas, autoSocorro, eletrica, injecao, limpezaBico, mecanicaGeral, salaEspera, trocaOleo } from "./officeModal";
 
 export function Offices() {
   return (
@@ -46,6 +47,7 @@ export function Offices() {
               //image="https://bit.ly/3LGNvnI"
               title="Mecânica em Geral"
               description="Da troca de peças à reparação complexa."
+              checklist={mecanicaGeral}
             />
           </GridItem>
           <GridItem>
@@ -54,6 +56,7 @@ export function Offices() {
               //image="https://bit.ly/3GfiwOz"
               title="Ar Condicionado"
               description="Ar condicionado é mais do que um luxo, é uma necessidade."
+              checklist={arCondicionado}
             />
           </GridItem>
           <GridItem>
@@ -62,6 +65,7 @@ export function Offices() {
               //image="https://bit.ly/3wEDdAo"
               title="Elétrica Automotiva"
               description="Problemas elétricos podem ser desafiadores, mas é nossa perícia."
+              checklist={eletrica}
             />
           </GridItem>
           <GridItem>
@@ -70,6 +74,7 @@ export function Offices() {
               //image="https://bit.ly/3sR6Axg"
               title="Injeção Eletrônica"
               description="O coração do seu carro merece cuidado especial."
+              checklist={injecao}
             />
           </GridItem>
           <GridItem>
@@ -78,6 +83,7 @@ export function Offices() {
               //image="https://media.istockphoto.com/id/1319354325/pt/foto/refueling-and-pouring-oil-quality-into-the-engine-motor-car-transmission-and-maintenance-gear.jpg?b=1&s=170667a&w=0&k=20&c=0rWXtRIA_8xlzCNQTdCUF1fXc0S1pOcHu6j3YVW2QyQ="
               title="Troca de Óleo"
               description="Um motor saudável começa com um óleo saudável."
+              checklist={trocaOleo}
             />
           </GridItem>
           <GridItem>
@@ -86,14 +92,16 @@ export function Offices() {
               //image="https://reparadorsa.com.br/wp-content/uploads/2022/01/RSA_MATERIA_03_01.jpg"
               title="Limpeza de Bico"
               description="Bicos entupidos podem comprometer o desempenho do seu veículo."
+              checklist={limpezaBico}
             />
           </GridItem>
           <GridItem>
             <Services
               serviceIcon={BsTruckFlatbed}
-              //image="https://bit.ly/3LGJHTD"
+              // image="https://bit.ly/3LGJHTD"
               title="Auto Socorro"
               description="Nosso serviço de guincho 24h garante que você não fique na estrada."
+              checklist={autoSocorro}
             />
           </GridItem>
           <GridItem>
@@ -102,6 +110,7 @@ export function Offices() {
               //image="https://bit.ly/3lAaxSS"
               title="Peças e Baterias"
               description="Peças e baterias de alta qualidade são a espinha dorsal de nosso serviço."
+              checklist={autoPecas}
             />
           </GridItem>
           <GridItem>
@@ -110,13 +119,14 @@ export function Offices() {
               //image="https://img.freepik.com/fotos-premium/sala-de-espera-e-recepcao-em-clinica-medica-com-sofas-confortaveis_124507-42509.jpg"
               title="Sala de espera"
               description="Enquanto cuidamos do seu veículo, relaxe em nossa acolhedora sala de espera."
+              checklist={salaEspera}
             />
           </GridItem>
           <GridItem>
             <Flex w="100%" align="center" justify="center">
               <Link
                 href="https://api.whatsapp.com/send?phone=553832208767&text=Ol%C3%A1%2C%20estou%20no%20site%20da%20APARBS.%20Gostaria%20de%20receber%20atendimento"
-                target="_blank" 
+                target="_blank"
                 h="40px"
                 p="2"
                 w="100%"
@@ -130,7 +140,7 @@ export function Offices() {
                 transition="0.5s"
                 textAlign="center"
               >
-                  Faça o seu agendamento
+                Faça o seu agendamento
               </Link>
             </Flex>
           </GridItem>

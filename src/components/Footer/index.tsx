@@ -10,7 +10,7 @@ import {
 import { LinkIcons } from "../linkIcons";
 
 export function Footer() {
-  const currentYear = new Date().getFullYear() 
+  const currentYear = new Date().getFullYear()
 
   return (
     <Flex
@@ -28,7 +28,7 @@ export function Footer() {
         mb="10"
         px={{ base: "8", md: "4", lg: "0" }}
         align={{ base: "center", md: "center", lg: "initial" }}
-        textAlign={{ base: "center", md: "center", lg:"left"}}
+        textAlign={{ base: "center", md: "center", lg: "left" }}
       >
         <Grid
           w="100%"
@@ -119,22 +119,22 @@ export function Footer() {
             </Flex>
           </GridItem>
 
-          <GridItem colSpan={{ base: 2, md: 2, lg: 1}}>
+          <GridItem colSpan={{ base: 2, md: 2, lg: 1 }}>
             <Flex
               w="100%"
               direction="column"
               gap="4"
               align={{ lg: "start", md: "center", base: "center" }}
             >
-              <Heading display={{ base:"none", lg:"flex" }} fontSize="1.375rem" mb={1} color="primary">
+              <Heading display={{ base: "none", lg: "flex" }} fontSize="1.375rem" mb={1} color="primary">
                 APARBS Soluções Automotivas
               </Heading>
-              
+
               <Img src="/Aparbs Dark 3.svg" alt="APARBS Soluções Automotivas" h="5rem" />
-              
+
               <Text fontFamily="Hind" fontSize="14px">
-                Há mais de 17 anos no mercado atendendo com qualidade,
-                <br/> garantindo eficiência em serviços automotivos.
+                Há mais de 25 anos no mercado atendendo com qualidade,
+                <br /> garantindo eficiência em serviços automotivos.
               </Text>
 
               <Flex>
@@ -163,7 +163,19 @@ export function Footer() {
           px={{ base: "8", md: "4", lg: "0" }}
           direction={{ lg: "row", md: "row", base: "column" }}
         >
-          <Text>Copyright © {currentYear} APARBS Soluções Automotivas</Text>
+          <Text color="terciary" fontWeight="300">
+            Copyright © {currentYear}
+            <Link
+              href="#"
+              ml="0.5rem"
+              fontWeight="600"
+              target="_blank"
+              _focus={{ border: "none" }}
+              _hover={{ textDecoration: "none", color: "primary" }}
+            >
+              APARBS Soluções Automotivas
+            </Link>
+          </Text>
           <Text color="terciary" fontWeight="300">
             © Created by
             <Link

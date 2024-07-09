@@ -13,18 +13,18 @@ import {
   ModalHeader,
   ModalOverlay,
 } from "@chakra-ui/react";
-import { useState } from "react";
 import { IconType } from "react-icons";
-import { OfficeModal } from "./officeModal";
+import { FaCheck } from "react-icons/fa";
 
 interface ServicesProps {
   title: string;
   description?: string;
   serviceIcon: IconType;
+  checklist?: string[];
   children?: [];
 }
 
-export function Services({ title, serviceIcon, description }: ServicesProps) {
+export function Services({ title, serviceIcon, description, checklist }: ServicesProps) {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
@@ -39,7 +39,19 @@ export function Services({ title, serviceIcon, description }: ServicesProps) {
         <ModalContent color="gray.800" >
           <ModalHeader color="primary" >{title}</ModalHeader>
           <ModalCloseButton />
-          <ModalBody>{description}</ModalBody>
+          <ModalBody>
+          {checklist && (
+              <Flex direction="column" gap={2}>
+                {checklist.map((item, index) => (
+                  <Flex key={index} align="center" gap={2}>
+                    <ChakraIcon as={FaCheck} color="primary" />
+                    <Text>{item}</Text>
+                  </Flex>
+                ))}
+              </Flex>
+            )}
+
+          </ModalBody>
 
           <ModalFooter>
             <Button mr={3} onClick={onClose}>
@@ -58,8 +70,8 @@ export function Services({ title, serviceIcon, description }: ServicesProps) {
         </Text>
       </Flex>
       <Flex
-        color= "primary"
-        _hover={{ color:"terciary", bg:"primary" }}
+        color="primary"
+        _hover={{ color: "terciary", bg: "primary" }}
         boxSize="80px"
         border="2px solid"
         borderColor="primary"
