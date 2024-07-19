@@ -38,7 +38,7 @@ export function About() {
         align="center"
       >
         <Flex w={{ lg: "33%", base: "50%" }}>
-          <Img src="/AparbsAfter.png" w="100%" objectFit="contain" />
+          <Img src="/Fachada1.png" w="100%" objectFit="contain" />
         </Flex>
         <Flex w={{ lg: "72%", base: "100%" }} direction="column" >
           <Heading color="primary" mb="0.75rem" textAlign={{base:"center", md:"initial", lg:"initial"}}>
