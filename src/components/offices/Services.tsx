@@ -37,7 +37,7 @@ export function Services({ title, serviceIcon, description, checklist }: Service
       <Modal isOpen={isOpen} onClose={onClose} isCentered>
         <ModalOverlay />
         <ModalContent color="gray.800" >
-          <ModalHeader color="primary" >{title}</ModalHeader>
+          <ModalHeader as="h4" color="primary" >{title}</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
           {checklist && (
@@ -62,7 +62,7 @@ export function Services({ title, serviceIcon, description, checklist }: Service
       </Modal>
 
       <Flex direction="column" flex="1">
-        <Heading color="primary" fontSize="18px">
+        <Heading as="h3" color="primary" fontSize="18px">
           {title}
         </Heading>
         <Text color="gray.600" fontWeight="400" fontSize="14px">

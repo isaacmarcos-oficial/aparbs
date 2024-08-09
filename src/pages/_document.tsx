@@ -1,13 +1,12 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document'
+import GoogleAnalytics from '../components/GoogleAnalytics'
 
 export default class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head>   
-          <title>APARBS Soluções Automotivas</title>
-          
-          <meta name="description" content="Há mais de 17 anos no mercado atendendo com qualidade, garantindo eficiência em serviços automotivos." />
+        <Head>             
+          <meta name="description" content="Há mais de 25 anos no mercado atendendo com qualidade, garantindo eficiência em serviços automotivos em Porteirinha e Riacho dos Machados/MG." />
           <meta name="meta keywords" content="Oficina mecânica, Loja de peças, Autopeças, Serviços automotivos, Reparo de carros, Troca de óleo, Mecânico de automóveis, Suspensão de carro, Freios para carros, Escapamentos, Revisão automotiva, Diagnóstico de problemas mecânicos" />
           
           <meta name="image" content="/AparbsFront.jpg" />
@@ -26,7 +25,10 @@ export default class MyDocument extends Document {
           <meta name="geo.region" content="BR" />
 
 
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-WJ87825878">
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-WJ87825878"
+          >
           </script>
 
           <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -36,7 +38,9 @@ export default class MyDocument extends Document {
           <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Poppins:wght@200;400;700&display=swap" rel="stylesheet"/>
           <link rel="shortcut icon" href="/favicon.svg" type="image/svg" />
         </Head>
+        <GoogleAnalytics/>
         <body>
+          <title>APARBS Soluções Automotivas</title>
           <Main />
           <NextScript />
         </body>

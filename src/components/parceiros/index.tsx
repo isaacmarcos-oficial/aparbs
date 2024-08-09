@@ -38,7 +38,7 @@ export function Parceiros() {
   return(
     <Flex direction="column" w="100%" align="center" justify="center"  py="3rem">
       <Flex w="100%" direction="column" align="center" justify="center" maxW="1140px" >
-        <Heading color="primary" mb="2rem" >
+        <Heading as="h2" color="primary" mb="2rem" >
           <a href="#NossosServicos">
             Nossos Clientes
           </a>
@@ -63,76 +63,6 @@ export function Parceiros() {
               <BusinessLogos LogoImage={logo.LogoImage} LogoAlt={logo.LogoAlt} />
             </SwiperSlide>
           ))}
-
-          {/* <SwiperSlide>
-            <BusinessLogos
-              LogoImage="/Business/copasa.png"
-              LogoAlt="Copasa"
-            />
-          </SwiperSlide>
-          
-          <SwiperSlide>
-            <BusinessLogos
-              LogoImage="/Business/cemig.png"
-              LogoAlt="Cemig"
-            />
-          </SwiperSlide>
-          
-          <SwiperSlide>
-            <BusinessLogos
-              LogoImage="/Business/localiza.png"
-              LogoAlt="Localiza"
-            />
-          </SwiperSlide>
-          
-          <SwiperSlide>
-            <BusinessLogos
-              LogoImage="/Business/unidas.png"
-              LogoAlt="Unidas"
-            />
-          </SwiperSlide>
-          
-          <SwiperSlide>
-            <BusinessLogos
-              LogoImage="/Business/prefPorteirinha.png"
-              LogoAlt="Prefeitura da Porteirinha"
-            />
-          </SwiperSlide>
-          
-          <SwiperSlide>
-            <BusinessLogos
-              LogoImage="/Business/prefSerranopolis.png"
-              LogoAlt="Prefeitura de Serranópolis"
-            />
-          </SwiperSlide>
-          
-          <SwiperSlide>
-            <BusinessLogos
-              LogoImage="/Business/mrdm.png"
-              LogoAlt="Mineradora Riacho dos Machados"
-            />
-          </SwiperSlide>
-          
-          <SwiperSlide>
-            <BusinessLogos
-              LogoImage="/Business/pmmg.png"
-              LogoAlt="Policial Militar MG"
-            />
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <BusinessLogos
-              LogoImage="/Business/seteLoc.png"
-              LogoAlt="Sete Loc"
-            />
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <BusinessLogos
-              LogoImage="/Business/control.png"
-              LogoAlt="Control"
-            />
-          </SwiperSlide> */}
 
         </Swiper>
       </Flex>      

@@ -38,7 +38,7 @@ export function Contact() {
                 bgColor="primary"
               >
                 <Flex>
-                  <Heading mb="1rem" color="terciary">
+                  <Heading as="h2" mb="1rem" color="terciary">
                     <a href="#faleconosco">FALE CONOSCO</a>
                   </Heading>
                 </Flex>

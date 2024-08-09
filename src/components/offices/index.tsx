@@ -24,7 +24,7 @@ export function Offices() {
         align="center"
         justify="center"
       >
-        <Heading color="primary" mb="2rem">
+        <Heading as="h2" color="primary" mb="2rem">
           <a href="#NossosServicos">Nossos Serviços</a>
         </Heading>
       </Flex>
@@ -44,7 +44,6 @@ export function Offices() {
           <GridItem>
             <Services
               serviceIcon={FaWrench}
-              //image="https://bit.ly/3LGNvnI"
               title="Mecânica em Geral"
               description="Da troca de peças à reparação complexa."
               checklist={mecanicaGeral}
@@ -53,7 +52,6 @@ export function Offices() {
           <GridItem>
             <Services
               serviceIcon={FaRegSnowflake}
-              //image="https://bit.ly/3GfiwOz"
               title="Ar Condicionado"
               description="Ar condicionado é mais do que um luxo, é uma necessidade."
               checklist={arCondicionado}
@@ -62,7 +60,6 @@ export function Offices() {
           <GridItem>
             <Services
               serviceIcon={FaBolt}
-              //image="https://bit.ly/3wEDdAo"
               title="Elétrica Automotiva"
               description="Problemas elétricos podem ser desafiadores, mas é nossa perícia."
               checklist={eletrica}
@@ -71,7 +68,6 @@ export function Offices() {
           <GridItem>
             <Services
               serviceIcon={FaMicrochip}
-              //image="https://bit.ly/3sR6Axg"
               title="Injeção Eletrônica"
               description="O coração do seu carro merece cuidado especial."
               checklist={injecao}
@@ -80,7 +76,6 @@ export function Offices() {
           <GridItem>
             <Services
               serviceIcon={RiOilFill}
-              //image="https://media.istockphoto.com/id/1319354325/pt/foto/refueling-and-pouring-oil-quality-into-the-engine-motor-car-transmission-and-maintenance-gear.jpg?b=1&s=170667a&w=0&k=20&c=0rWXtRIA_8xlzCNQTdCUF1fXc0S1pOcHu6j3YVW2QyQ="
               title="Troca de Óleo"
               description="Um motor saudável começa com um óleo saudável."
               checklist={trocaOleo}
@@ -89,7 +84,6 @@ export function Offices() {
           <GridItem>
             <Services
               serviceIcon={FaSprayCan}
-              //image="https://reparadorsa.com.br/wp-content/uploads/2022/01/RSA_MATERIA_03_01.jpg"
               title="Limpeza de Bico"
               description="Bicos entupidos podem comprometer o desempenho do seu veículo."
               checklist={limpezaBico}
@@ -98,7 +92,6 @@ export function Offices() {
           <GridItem>
             <Services
               serviceIcon={BsTruckFlatbed}
-              // image="https://bit.ly/3LGJHTD"
               title="Auto Socorro"
               description="Nosso serviço de guincho 24h garante que você não fique na estrada."
               checklist={autoSocorro}
@@ -107,7 +100,6 @@ export function Offices() {
           <GridItem>
             <Services
               serviceIcon={FaCarBattery}
-              //image="https://bit.ly/3lAaxSS"
               title="Peças e Baterias"
               description="Peças e baterias de alta qualidade são a espinha dorsal de nosso serviço."
               checklist={autoPecas}
@@ -116,7 +108,6 @@ export function Offices() {
           <GridItem>
             <Services
               serviceIcon={FaCouch}
-              //image="https://img.freepik.com/fotos-premium/sala-de-espera-e-recepcao-em-clinica-medica-com-sofas-confortaveis_124507-42509.jpg"
               title="Sala de espera"
               description="Enquanto cuidamos do seu veículo, relaxe em nossa acolhedora sala de espera."
               checklist={salaEspera}

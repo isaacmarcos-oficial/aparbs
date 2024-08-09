@@ -20,7 +20,7 @@ export function About() {
         maxW="71.25rem"
         textAlign="center"
       >
-        <Heading>
+        <Heading as="h1">
           <a href="#sobreaaparbs">APARBS Soluções Automotivas</a>
         </Heading>
 
@@ -41,7 +41,7 @@ export function About() {
           <Img src="/Fachada1.png" w="100%" objectFit="contain" />
         </Flex>
         <Flex w={{ lg: "72%", base: "100%" }} direction="column" >
-          <Heading color="primary" mb="0.75rem" textAlign={{base:"center", md:"initial", lg:"initial"}}>
+          <Heading as="h2" color="primary" mb="0.75rem" textAlign={{base:"center", md:"initial", lg:"initial"}}>
             Conheça Nossa História
           </Heading>
           <Text
