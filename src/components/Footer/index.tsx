@@ -1,4 +1,5 @@
 import {
+  Button,
   Flex,
   Grid,
   GridItem,
@@ -146,8 +147,8 @@ export function Footer() {
       </Flex>
 
       <Flex
+        py="4"
         lineHeight={10}
-        //bg="gray.800"
         borderTop="0.1px solid"
         borderColor="gray.600"
         w="100%"
@@ -176,19 +177,16 @@ export function Footer() {
               APARBS Soluções Automotivas
             </Link>
           </Text>
-          <Text color="terciary" fontWeight="300">
-            © Created by
-            <Link
-              href="https://www.isaacmarcos.com.br"
-              ml="0.5rem"
-              fontWeight="600"
-              target="_blank"
-              _focus={{ border: "none" }}
-              _hover={{ textDecoration: "none", color: "primary" }}
-            >
-              Isaac Marcos
-            </Link>
-          </Text>
+
+          <Link href="https://www.isaacmarcos.com.br" target="_blank" _hover={{ textDecoration: "none" }}>
+            <Flex align="center" justify="center" border="1px solid" borderColor="#1e293b" w="270px" borderRadius="md" bg="#0f172a" _hover={{bg: "#334155"}} textColor="white" transition="0.2s"
+            className="flex items-center h-8 w-[270px] rounded border border-slate-800 hover:border-yellow-500 shadow bg-slate-900 hover:bg-slate-800">
+              <Text>
+                Construído por Isaac
+              </Text>
+              <Text fontWeight="600">Marcos</Text>
+            </Flex>
+          </Link>
         </Flex>
       </Flex>
     </Flex>
