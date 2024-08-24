@@ -127,7 +127,7 @@ export function Contact() {
                   w="100%"
                   h="100%"
                   src="/Camada 2.jpg"
-                  alt="Uma engrenagem"
+                  alt="A foto de Aryhur Vieira, diretor financeiro da APARBS"
                   objectFit="cover"
                   objectPosition="80%"
                 />

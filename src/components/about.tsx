@@ -38,7 +38,7 @@ export function About() {
         align="center"
       >
         <Flex w={{ lg: "33%", base: "50%" }}>
-          <Img src="/Fachada1.png" w="100%" objectFit="contain" />
+          <Img src="/Fachada1.png" w="100%" alt="Fachada da oficina mecânica APARBS na cidade de Porteirinha MG e na cidade de Riacho dos Machados" objectFit="contain" />
         </Flex>
         <Flex w={{ lg: "72%", base: "100%" }} direction="column" >
           <Heading as="h2" color="primary" mb="0.75rem" textAlign={{base:"center", md:"initial", lg:"initial"}}>

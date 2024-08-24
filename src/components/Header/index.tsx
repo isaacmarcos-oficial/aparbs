@@ -29,7 +29,7 @@ export function Header() {
           justify={{ lg: "center", md: "center", base: "right" }}
         >
           <a href="/">
-            <Img src="/Aparbs Dark 10.svg" h="35px" alt="logo APARBS" />
+            <Img src="/Aparbs Dark 10.svg" h="35px" alt="logo da APARBS Soluções Automotivas" />
           </a>
         </Flex>
 
