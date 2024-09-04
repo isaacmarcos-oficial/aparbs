@@ -1,7 +1,7 @@
-import { Flex, Heading, Img } from "@chakra-ui/react";
+import { Flex, Heading } from "@chakra-ui/react";
 import { BusinessLogos } from "./BusinessLogos";
 
-import React, { useRef, useState } from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";

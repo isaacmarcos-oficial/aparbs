@@ -1,4 +1,4 @@
-import { Flex, Heading, GridItem, Grid, Img, Link } from "@chakra-ui/react";
+import { Flex, Heading, GridItem, Grid, Link, Box } from "@chakra-ui/react";
 import { Services } from "./Services";
 import { RiOilFill } from "react-icons/ri";
 import {
@@ -12,6 +12,7 @@ import {
 } from "react-icons/fa";
 import { BsTruckFlatbed } from "react-icons/bs";
 import { arCondicionado, autoPecas, autoSocorro, eletrica, injecao, limpezaBico, mecanicaGeral, salaEspera, trocaOleo } from "./officeModal";
+import Image from "next/image";
 
 export function Offices() {
   return (
@@ -136,9 +137,20 @@ export function Offices() {
             </Flex>
           </GridItem>
         </Grid>
-        <Flex maxW="33%" w="100%" display={{ base: "none", md: "flex" }}>
-          <Img src="/Arthur-Reception.png" objectFit="contain" />
-        </Flex>
+        <Box
+          position="relative"
+          maxW="33%" w="100%"
+          display={{ base: "none", md: "flex" }}
+        >
+          <Image
+            width={500}
+            height={500}
+            src="/Arthur-Reception.webp"
+            alt="Arthur Vieira, diretor financeiro da oficina APARBS Soluções Automotivas na cidade de Porteirinha/MG e Riacho dos Machados/MG"
+            loading="lazy"
+            style={{ objectFit: "contain", position: "relative"  }}
+          />
+        </Box>
       </Flex>
     </Flex>
   );

@@ -1,14 +1,13 @@
 import {
-  Button,
   Flex,
   Grid,
   GridItem,
   Heading,
-  Img,
   Link,
   Text,
 } from "@chakra-ui/react";
 import { LinkIcons } from "../linkIcons";
+import Image from "next/image";
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -131,7 +130,10 @@ export function Footer() {
                 APARBS Soluções Automotivas
               </Heading>
 
-              <Img src="/Aparbs Dark 3.svg" alt="APARBS Soluções Automotivas" h="5rem" />
+              <Image
+                width={150}
+                height={80}
+                src="/Aparbs Dark 3.svg" alt="APARBS Soluções Automotivas" />
 
               <Text fontFamily="Hind" fontSize="14px">
                 Há mais de 25 anos no mercado atendendo com qualidade,

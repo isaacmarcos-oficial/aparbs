@@ -1,7 +1,9 @@
-import { Flex, Img, SimpleGrid } from "@chakra-ui/react";
+import { Flex, SimpleGrid } from "@chakra-ui/react";
 import React from "react";
 import { LinkIcons } from "../linkIcons";
 import { Sidebar } from "../Sidebar/Sidebar";
+import Link from "next/link";
+import Image from "next/image";
 
 export function Header() {
   return (
@@ -28,9 +30,13 @@ export function Header() {
           align="center"
           justify={{ lg: "center", md: "center", base: "right" }}
         >
-          <a href="/">
-            <Img src="/Aparbs Dark 10.svg" h="35px" alt="logo da APARBS Soluções Automotivas" />
-          </a>
+          <Link href="/">
+            <Image
+              width={150}
+              height={150}
+              src="/Aparbs Dark 10.svg"
+              alt="logo da APARBS Soluções Automotivas" />
+          </Link>
         </Flex>
 
         <Flex

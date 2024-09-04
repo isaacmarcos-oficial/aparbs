@@ -6,17 +6,16 @@ import {
   DrawerHeader,
   DrawerOverlay,
   Flex,
-  Img,
   useDisclosure,
   DrawerBody,
   Box,
   Icon,
   Heading,
-  SimpleGrid,
 } from "@chakra-ui/react";
 import React from "react";
 import { ImMenu } from "react-icons/im";
 import { LinkIcons } from "../linkIcons";
+import Image from "next/image";
 
 export function Sidebar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -25,7 +24,7 @@ export function Sidebar() {
   return (
     <Flex>
       <Box onClick={onOpen} _hover={{ color: "secundary" }} cursor="pointer">
-        <a ref={btnRef}>
+        <a ref={btnRef} href="#" aria-label="Abrir menu">
           <Icon as={ImMenu} boxSize="20px" />
         </a>
       </Box>
@@ -47,7 +46,11 @@ export function Sidebar() {
           <DrawerCloseButton color="secundary" _hover={{ bg:"none", color:"terciary" }} />
           <DrawerHeader>
             <Flex align="center" justify="center" mt="60px">
-              <Img src="/Aparbs Dark 3.svg" alt="logo APARBS" h="96px" />
+              <Image
+                width={150}
+                height={100}
+                src="/Aparbs Dark 3.svg"
+                alt="APARBS Soluções Automotivas" />
             </Flex>
           </DrawerHeader>
           <DrawerBody>

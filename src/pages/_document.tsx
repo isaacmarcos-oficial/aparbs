@@ -13,9 +13,8 @@ export default class MyDocument extends Document {
     }
 
     return (
-      <Html>
+      <Html lang="pt-BR">
         <Head>
-          <title>{metas.title}</title>
           <meta name="description" content={metas.description} />
           <meta name="keywords" content={metas.keywords} />
 

@@ -4,10 +4,8 @@ import {
   GridItem,
   Heading,
   Icon,
-  Img,
-  grid,
 } from "@chakra-ui/react";
-import { Ri24HoursFill, Ri24HoursLine } from "react-icons/ri";
+import { Ri24HoursLine } from "react-icons/ri";
 import { IoRocketSharp } from "react-icons/io5";
 import { MdOutlineSecurity } from "react-icons/md";
 import { FaTools } from "react-icons/fa";

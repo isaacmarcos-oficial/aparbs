@@ -1,15 +1,16 @@
 import {
+  Box,
   Button,
   Flex,
   Grid,
   GridItem,
   Heading,
-  Img,
   Link,
   Text,
 } from "@chakra-ui/react";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { LinkIcons } from "./linkIcons";
+import Image from "next/image";
 
 export function Contact() {
   return (
@@ -118,20 +119,22 @@ export function Contact() {
             </GridItem>
 
             <GridItem colSpan={1}>
-              <Flex
+              <Box
                 display={{ base: "none", md:"flex", lg: "flex" }}
                 w="100%"
                 h="100%"
+                position="relative"
               >
-                <Img
-                  w="100%"
-                  h="100%"
+                <Image
+                  width={500}
+                  height={500}
+                  loading="lazy"
+                  quality={50}
                   src="/Camada 2.jpg"
-                  alt="A foto de Aryhur Vieira, diretor financeiro da APARBS"
-                  objectFit="cover"
-                  objectPosition="80%"
+                  alt="Alaelton Vieira, Alaídes Vieira, Arthur Vieira e Aldiney Vieira, diretores da oficina mecânica APARBS Soluções Automotivas de Porteirinha/MG e Riacho dos Machados/MG"
+                  style={{ objectFit: "cover", objectPosition: "80% top" }}
                 />
-              </Flex>
+              </Box>
             </GridItem>
           </Grid>
         </Flex>
