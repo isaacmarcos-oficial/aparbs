@@ -10,7 +10,7 @@ import { IoRocketSharp } from "react-icons/io5";
 import { MdOutlineSecurity } from "react-icons/md";
 import { FaTools } from "react-icons/fa";
 
-export function Destaque() {
+export default function Destaque() {
   return (
     <Flex px={{ lg: "none", md:"8", base: "4" }}
     w="100%" align="center" justify="center"

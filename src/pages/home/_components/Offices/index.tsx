@@ -1,5 +1,5 @@
 import { Flex, Heading, GridItem, Grid, Link, Box } from "@chakra-ui/react";
-import { Services } from "./Services";
+import Services from "./Services";
 import { RiOilFill } from "react-icons/ri";
 import {
   FaCouch,
@@ -14,7 +14,9 @@ import { BsTruckFlatbed } from "react-icons/bs";
 import { arCondicionado, autoPecas, autoSocorro, eletrica, injecao, limpezaBico, mecanicaGeral, salaEspera, trocaOleo } from "./officeModal";
 import Image from "next/image";
 
-export function Offices() {
+export default function Offices() {
+  
+
   return (
     <Flex direction="column" w="100%" align="center" justify="center" py="2rem">
       <Flex

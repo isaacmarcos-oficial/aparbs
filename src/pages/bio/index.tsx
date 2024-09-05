@@ -2,8 +2,8 @@ import { Box, Flex, Image, Heading, Text, Icon, Link } from "@chakra-ui/react";
 import { BsTruckFlatbed } from "react-icons/bs";
 import { HiMapPin } from "react-icons/hi2";
 import { AiOutlineSolution, AiOutlineWhatsApp } from "react-icons/ai";
-import { LinkIcons } from "../../components/linkIcons";
-import { LinkBio } from "../../components/linkBio";
+import { LinkIcons } from "../../components/LinkIcons";
+import LinkBio from "./_components/linkBio";
 
 export default function Bio() {
   return (
@@ -20,6 +20,7 @@ export default function Bio() {
         w="100%"
         maxW="540px"
         bgColor="primary"
+        color="terciary"
         minH="100vh"
         align="center"
         px="40px"
@@ -61,7 +62,7 @@ export default function Bio() {
         </Flex>
 
         <Flex w="100%" align="center" justify="center" mt="10">
-          <LinkIcons />
+          <LinkIcons theme="bgRed" />
         </Flex>
 
         <Flex flexDir="column" w="100%" maxW="500px" gap="3" mt="3">

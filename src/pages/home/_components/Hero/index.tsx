@@ -1,7 +1,7 @@
 import { Box } from "@chakra-ui/react";
 import Image from 'next/image'
 
-export function Hero() {
+export default function Hero() {
   return (
     <Box
       w="100%"

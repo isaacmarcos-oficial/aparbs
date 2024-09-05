@@ -1,6 +1,6 @@
 import { Flex, SimpleGrid } from "@chakra-ui/react";
 import React from "react";
-import { LinkIcons } from "../linkIcons";
+import { LinkIcons } from "../LinkIcons";
 import { Sidebar } from "../Sidebar/Sidebar";
 import Link from "next/link";
 import Image from "next/image";
@@ -44,7 +44,7 @@ export function Header() {
           justify="right"
           display={{ md: "flex", base: "none" }}
         >
-          <LinkIcons />
+          <LinkIcons theme="bgRed" />
         </Flex>
       </SimpleGrid>
     </Flex>

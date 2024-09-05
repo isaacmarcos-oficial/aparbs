@@ -24,7 +24,7 @@ interface ServicesProps {
   children?: [];
 }
 
-export function Services({ title, serviceIcon, description, checklist }: ServicesProps) {
+export default function Services({ title, serviceIcon, description, checklist }: ServicesProps) {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (

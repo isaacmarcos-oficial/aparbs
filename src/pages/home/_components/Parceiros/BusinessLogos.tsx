@@ -6,7 +6,7 @@ interface LogosProps {
   LogoAlt: string
 }
 
-export function BusinessLogos({LogoImage, LogoAlt}: LogosProps) {
+export default function BusinessLogos({LogoImage, LogoAlt}: LogosProps) {
   return (
     <Flex 
       boxSize="sm"

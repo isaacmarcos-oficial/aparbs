@@ -1,3 +1,5 @@
+import React from 'react';
+
 export const mecanicaGeral = [
   "Diagnóstico completo do veículo",
   "Troca de peças defeituosas",
@@ -78,3 +80,13 @@ export const salaEspera = [
   "Televisão e entretenimento",
   "Informações sobre o andamento do serviço"
 ]
+
+const OfficeModal = () => {
+  return (
+    <div>
+      <h1>Office Modal</h1>
+    </div>
+  );
+};
+
+export default OfficeModal;

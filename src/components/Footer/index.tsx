@@ -6,7 +6,7 @@ import {
   Link,
   Text,
 } from "@chakra-ui/react";
-import { LinkIcons } from "../linkIcons";
+import { LinkIcons } from "../LinkIcons";
 import Image from "next/image";
 
 export function Footer() {
@@ -19,6 +19,7 @@ export function Footer() {
       mt="3rem"
       pt="3rem"
       bgColor="secundary"
+      color="terciary"
       align="center"
       justify="center"
     >
@@ -141,7 +142,7 @@ export function Footer() {
               </Text>
 
               <Flex>
-                <LinkIcons />
+                <LinkIcons theme="bgBlack" />
               </Flex>
             </Flex>
           </GridItem>

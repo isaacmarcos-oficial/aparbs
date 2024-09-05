@@ -24,7 +24,7 @@ export const theme = extendTheme ({
     global: {
       body: {
         bg: 'White',
-        color: 'white'
+        color: 'secundary'
       },
       ".swiper-button-next": {
         right: [8, 10],

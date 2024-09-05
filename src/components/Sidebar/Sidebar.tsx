@@ -11,10 +11,12 @@ import {
   Box,
   Icon,
   Heading,
+  Button,
+  Link,
 } from "@chakra-ui/react";
 import React from "react";
 import { ImMenu } from "react-icons/im";
-import { LinkIcons } from "../linkIcons";
+import { LinkIcons } from "../LinkIcons";
 import Image from "next/image";
 
 export function Sidebar() {
@@ -22,7 +24,7 @@ export function Sidebar() {
   const btnRef = React.useRef();
 
   return (
-    <Flex>
+    <Flex color="terciary">
       <Box onClick={onOpen} _hover={{ color: "secundary" }} cursor="pointer">
         <a ref={btnRef} href="#" aria-label="Abrir menu">
           <Icon as={ImMenu} boxSize="20px" />
@@ -38,6 +40,7 @@ export function Sidebar() {
         <DrawerOverlay />
         <DrawerContent
           bgColor="primary"
+          color="terciary"
           h="100%"
           borderRight="4px"
           borderColor="primary"
@@ -89,7 +92,7 @@ export function Sidebar() {
                 </Text>
 
                 <Flex mb="32px" gap="16px">
-                  <LinkIcons />
+                  <LinkIcons theme="bgRed" />
                 </Flex>
               </Flex>
 
@@ -110,6 +113,12 @@ export function Sidebar() {
                   Venha tomar <br /> um café conosco!
                 </Text>
               </Flex>
+
+              <Link href="/blog" w="100%">
+                <Button w="100%" mt="1.875rem">
+                  Conheça nosso blog
+                </Button>
+              </Link>
 
               <Heading
                 w="100%"

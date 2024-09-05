@@ -9,10 +9,10 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { FaMapMarkerAlt } from "react-icons/fa";
-import { LinkIcons } from "./linkIcons";
 import Image from "next/image";
+import { LinkIcons } from "../../../../components/LinkIcons";
 
-export function Contact() {
+export default function Contact() {
   return (
     <Flex direction="column" w="100%" align="center" justify="center" >
       <Flex
@@ -50,7 +50,7 @@ export function Contact() {
                   mb="3rem"
                 >
                   <Flex mb="0.5rem" gap="1rem">
-                    <LinkIcons />
+                    <LinkIcons theme="bgRed"/>
                   </Flex>
                   <Link
                     href="tel:+553832208767"

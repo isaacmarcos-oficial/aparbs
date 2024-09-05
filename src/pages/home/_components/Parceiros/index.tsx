@@ -1,5 +1,5 @@
 import { Flex, Heading } from "@chakra-ui/react";
-import { BusinessLogos } from "./BusinessLogos";
+import BusinessLogos from "./BusinessLogos";
 
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -33,7 +33,7 @@ const logoData: LogoData[] = [
 ];
 
 
-export function Parceiros() {
+export default function Parceiros() {
 
   return(
     <Flex direction="column" w="100%" align="center" justify="center"  py="3rem">

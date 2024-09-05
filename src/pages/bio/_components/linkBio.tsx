@@ -1,7 +1,6 @@
 import { Icon, Box, Link, Text } from "@chakra-ui/react";
 import { useState } from "react";
 import { IconType } from "react-icons";
-import { HiMapPin } from "react-icons/hi2";
 
 interface LinkBioProps {
   title: string;
@@ -9,7 +8,7 @@ interface LinkBioProps {
   iconLink: IconType;
 }
 
-export function LinkBio({ adress, iconLink, title }: LinkBioProps) {
+export default function LinkBio({ adress, iconLink, title }: LinkBioProps) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (

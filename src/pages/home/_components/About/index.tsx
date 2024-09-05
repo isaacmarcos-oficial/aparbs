@@ -1,7 +1,7 @@
 import { Flex, Heading, Text, Box } from "@chakra-ui/react";
 import Image from "next/image";
 
-export function About() {
+export default function About() {
   return (
     <Flex direction="column" w="100%" align="center" justify="center" py="2rem">
       <Flex w="100%" maxW="1280px" direction="column" px={{ base: "4", md: "4", lg: "0" }}>
