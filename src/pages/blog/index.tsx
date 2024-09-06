@@ -61,18 +61,19 @@ export default function Blog({ posts }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   try {
     const data = await client.request(GET_POSTS);
     
     const sortedPosts = data.allPosts.sort((a: any, b: any) => {
-      return new Date(b._firstPublishedAt).getDate() - new Date(a._firstPublishedAt).getDate();
+      return new Date(b._firstPublishedAt).getTime() - new Date(a._firstPublishedAt).getTime();
     });
 
     return {
       props: {
         posts: sortedPosts
       },
+      revalidade: 60
     };
   } catch (error) {
     console.error(error);
@@ -80,6 +81,7 @@ export async function getStaticProps() {
       props: {
         posts: [],
       },
+      revalidate: 60,
     };
   }
 }
