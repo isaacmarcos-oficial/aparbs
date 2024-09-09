@@ -7,9 +7,28 @@ import { GET_POSTS } from '../../lib/queries';
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
 import Link from "next/link";
-
+import { sanitize } from "isomorphic-dompurify";
+import { useEffect, useState } from "react";
+import DOMPurify from "dompurify";
 
 export default function Blog({ posts }) {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  const sanitize = (content) => {
+    if (typeof window === 'undefined') {
+      return content; // No servidor, retorna o conteúdo sem sanitizar
+    }
+    return DOMPurify.sanitize(content);
+  };
+
+  if (!isMounted) {
+    return null; // ou um placeholder/skeleton
+  }
+  
   return (
     <Flex direction="column" align="center" justify="center">
       <Flex w="100%" mb="120px">
@@ -48,7 +67,7 @@ export default function Blog({ posts }) {
                     <Text
                       noOfLines={5}
                       as="div"
-                      dangerouslySetInnerHTML={{ __html: post.content }}
+                      dangerouslySetInnerHTML={{ __html: sanitize(post.content) }}
                     />
                 </Stack>
               </Card>
@@ -61,11 +80,11 @@ export default function Blog({ posts }) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   try {
     const data = await client.request(GET_POSTS);
     
-    const sortedPosts = data.allPosts.sort((a: any, b: any) => {
+    const sortedPosts = data.allPosts.sort((a, b) => {
       return new Date(b._firstPublishedAt).getTime() - new Date(a._firstPublishedAt).getTime();
     });
 
@@ -73,7 +92,6 @@ export async function getServerSideProps() {
       props: {
         posts: sortedPosts
       },
-      revalidade: 60
     };
   } catch (error) {
     console.error(error);
@@ -81,7 +99,6 @@ export async function getServerSideProps() {
       props: {
         posts: [],
       },
-      revalidate: 60,
     };
   }
 }
