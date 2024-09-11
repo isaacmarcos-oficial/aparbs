@@ -33,3 +33,15 @@ export const GET_POST_BY_ID = `
     }
   }
 `;
+
+export const GET_PARTNERS = `
+  query {
+    allPartners {
+      id
+      business
+      image {
+        url
+      }
+    }
+  }
+`;

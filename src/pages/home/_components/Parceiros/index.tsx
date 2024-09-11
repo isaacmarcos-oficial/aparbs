@@ -1,71 +1,38 @@
-import { Flex, Heading } from "@chakra-ui/react";
+import { Flex, Heading, Skeleton, Wrap, WrapItem } from "@chakra-ui/react";
 import BusinessLogos from "./BusinessLogos";
 
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
+export default function Parceiros({ partners }) {
+	if (!partners || !Array.isArray(partners)) {
+		return <Skeleton height="200px" w="100%" />;
+	}
 
-import "swiper/css";
-import 'swiper/css/autoplay';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-
-import { Autoplay, Navigation, Pagination } from "swiper";
-
-interface LogoData {
-  LogoImage: string;
-  LogoAlt: string;
-}
-
-const logoData: LogoData[] = [
-  { LogoImage: "/Business/copasa.png", LogoAlt: "Copasa" },
-  { LogoImage: "/Business/cemig.png", LogoAlt: "Cemig" },
-  { LogoImage: "/Business/localiza.png", LogoAlt: "Localiza" },
-  { LogoImage: "/Business/unidas.png", LogoAlt: "Unidas" },
-  { LogoImage: "/Business/prefPorteirinha.png", LogoAlt: "Prefeitura da Porteirinha" },
-  { LogoImage: "/Business/prefSerranopolis.png", LogoAlt: "Prefeitura de Serranópolis" },
-  { LogoImage: "/Business/mrdm.png", LogoAlt: "Mineradora Riacho dos Machados" },
-  { LogoImage: "/Business/pmmg.png", LogoAlt: "Policial Militar de Minas Gerais" },
-  { LogoImage: "/Business/seteLoc.png", LogoAlt: "Sete Loc" },
-  { LogoImage: "/Business/control.png", LogoAlt: "Control" },
-  { LogoImage: "/Business/orica.png", LogoAlt: "Orica" },
-  { LogoImage: "/Business/armac.png", LogoAlt: "Armac" },
-  { LogoImage: "/Business/extraBom.png", LogoAlt: "Extra Bom Supermercado" },
-];
-
-
-export default function Parceiros() {
-
-  return(
-    <Flex direction="column" w="100%" align="center" justify="center"  py="3rem">
-      <Flex w="100%" direction="column" align="center" justify="center" maxW="1140px" >
-        <Heading as="h2" color="primary" mb="2rem" >
-          <a href="#NossosServicos">
-            Nossos Clientes
-          </a>
-        </Heading>
-      </Flex>
-
-      <Flex w="100%" maxW="1280px" wrap="wrap" justify={{ lg:"space-between", md: "space-around", base:"space-around"}} gap="1.5rem" px={{ lg: "none", md:"8", base: "4" }}>
-        <Swiper
-          modules={[ Autoplay, Pagination, Navigation ]}
-          slidesPerView={5}
-          spaceBetween={0}
-          loop={true}
-          grabCursor={true}
-          loopedSlides={4}
-          autoplay={{ delay: 0, disableOnInteraction: false }}
-          speed={5000}
-          className="mySwiper"
-        >
-          
-          {logoData.map((logo, index) => (
-            <SwiperSlide key={index}>
-              <BusinessLogos LogoImage={logo.LogoImage} LogoAlt={logo.LogoAlt} />
-            </SwiperSlide>
-          ))}
-
-        </Swiper>
-      </Flex>      
-    </Flex>
-  )
+	return (
+		<Flex direction="column" w="100%" align="center" justify="center" py="3rem">
+			<Flex
+				w="100%"
+				direction="column"
+				align="center"
+				justify="center"
+				maxW="1140px"
+			>
+				<Heading as="h2" color="primary" mb="2rem">
+					<a href="#NossosServicos">Nossos Clientes</a>
+				</Heading>
+				<Flex direction="column" w="100%" align="center" justify="center">
+					<Wrap spacing="8" mx="4" align="center" justify="center">
+						{partners.map((partner) => {
+							return (
+								<WrapItem key={partner.id} gap="8">
+									<BusinessLogos
+										LogoImage={partner.image.url}
+										LogoAlt={partner.business}
+									/>
+								</WrapItem>
+							);
+						})}
+					</Wrap>
+				</Flex>
+			</Flex>
+		</Flex>
+	);
 }
