@@ -1,197 +1,124 @@
-import {
-  Flex,
-  Grid,
-  GridItem,
-  Heading,
-  Link,
-  Text,
-} from "@chakra-ui/react";
-import { LinkIcons } from "../LinkIcons";
+import Link from "next/link";
 import Image from "next/image";
+import { LinkIcons } from "../LinkIcons";
 
 export function Footer() {
-  const currentYear = new Date().getFullYear()
+	const currentYear = new Date().getFullYear();
 
-  return (
-    <Flex
-      w="100%"
-      direction="column"
-      mt="3rem"
-      pt="3rem"
-      bgColor="secundary"
-      color="terciary"
-      align="center"
-      justify="center"
-    >
-      <Flex
-        maxW="1280px"
-        w="100%"
-        mb="10"
-        px={{ base: "8", md: "4", lg: "0" }}
-        align={{ base: "center", md: "center", lg: "initial" }}
-        textAlign={{ base: "center", md: "center", lg: "left" }}
-      >
-        <Grid
-          w="100%"
-          templateColumns={{
-            lg: "repeat(5, 1fr)",
-            md: "repeat(2, 1fr)",
-            base: "repeat(1, 1fr)",
-          }}
-          gap={{ base: 8, md: "none", lg: "none" }}
-        >
-          {/* Serviços */}
-          <GridItem>
-            <Flex direction="column" fontSize="14px" lineHeight="1.75rem">
-              <Heading fontSize="1.375rem" mb={1} color="primary">
-                Nossos Serviços
-              </Heading>
-              <Text>Mecânica em Geral</Text>
-              <Text>Elétrica Automotiva</Text>
-              <Text>Troca de Óleo</Text>
-              <Text>Auto Socorro</Text>
-              <Text>Ar Condicionado</Text>
-              <Text>Injeção Eletrônica</Text>
-              <Text>Limpeza de Bico</Text>
-              <Text>Peças e Baterias</Text>
-            </Flex>
-          </GridItem>
+	return (
+		<div className="flex flex-col w-full items-center justify-center bg-secundary text-terciary mt-12 pt-12 ">
+			<div className="flex w-full max-w-[1280px] px-4 mb-10 items-center justify-center">
+				<div className="grid grid-cols-2 lg:grid-cols-5 gap-8">
+					{/* Serviços */}
+					<div className="text-sm leading-7">
+						<h4 className="text-2xl mb-1 text-primary font-bold">
+							Nossos Serviços
+						</h4>
+						<p>Mecânica em Geral</p>
+						<p>Elétrica Automotiva</p>
+						<p>Troca de Óleo</p>
+						<p>Auto Socorro</p>
+						<p>Ar Condicionado</p>
+						<p>Injeção Eletrônica</p>
+						<p>Limpeza de Bico</p>
+						<p>Peças e Baterias</p>
+					</div>
 
-          {/* APARBS Porteirinha */}
-          <GridItem>
-            <Flex direction="column" fontSize="14px" lineHeight="1.75rem">
-              <Heading fontSize="1.375rem" mb={1} color="primary">
-                Porteirinha/MG
-              </Heading>
-              <Text color="gray.300" fontWeight="300">
-                07.263.234/0001-70
-              </Text>
-              <Text>
-                Av. Dalton Cunha, 201
-                <br />
-                Bairro Eldorado
-                <br />
-                Porteirinha/MG
-                <br />
-                CEP: 39520-000
-              </Text>
-            </Flex>
-          </GridItem>
+					{/* APARBS Porteirinha */}
+					<div className="text-sm leading-7">
+						<h4 className="text-2xl mb-1 text-primary font-bold">
+							Porteirinha/MG
+						</h4>
+						<p className="font-light text-zinc-300">07.263.234/0001-70</p>
+						<p>
+							Av. Dalton Cunha, 201
+							<br />
+							Bairro Eldorado
+							<br />
+							Porteirinha/MG
+							<br />
+							CEP: 39520-000
+						</p>
+					</div>
 
-          {/* APARBS Riacho dos Machados */}
-          <GridItem>
-            <Flex direction="column" fontSize="14px" lineHeight="1.75rem">
-              <Heading fontSize="1.375rem" mb={1} color="primary">
-                Riacho dos Machados/MG
-              </Heading>
-              <Text color="gray.300" fontWeight="300">
-                37.555.350/0001-24
-              </Text>
-              <Text>
-                Av. Salviana Alves da Cruz, 70
-                <br />
-                Bairro Lourdes
-                <br />
-                Riacho dos Machados/MG
-                <br />
-                CEP: 39529-000
-              </Text>
-            </Flex>
-          </GridItem>
+					{/* APARBS Riacho dos Machados */}
+					<div className="text-sm leading-7">
+						<h4 className="text-2xl mb-1 text-primary font-bold">
+							Riacho dos Machados/MG
+						</h4>
+						<p className="font-light text-zinc-300">37.555.350/0001-24</p>
+						<p>
+							Av. Salviana Alves da Cruz, 70
+							<br />
+							Bairro Lourdes
+							<br />
+							Riacho dos Machados/MG
+							<br />
+							CEP: 39529-000
+						</p>
+					</div>
 
-          {/* APARBS Transportes */}
-          <GridItem>
-            <Flex direction="column" fontSize="14px" lineHeight="1.75rem">
-              <Heading fontSize="1.375rem" mb={1} color="primary">
-                APARBS Transportes
-              </Heading>
-              <Text color="gray.300" fontWeight="300">
-                51.494.204/0001-67
-              </Text>
-              <Text>
-                Av. Gabriel Mendes Santos, 330
-                <br />
-                Paciência
-                <br />
-                Porteirinha/MG
-                <br />
-                CEP: 39520-000
-              </Text>
-            </Flex>
-          </GridItem>
+					{/* APARBS Transportes */}
+					<div className="text-sm leading-7">
+						<h4 className="text-2xl mb-1 text-primary font-bold">
+							APARBS Transportes
+						</h4>
+						<p className="font-light text-zinc-300">51.494.204/0001-67</p>
+						<p>
+							Av. Gabriel Mendes Santos, 330
+							<br />
+							Paciência
+							<br />
+							Porteirinha/MG
+							<br />
+							CEP: 39520-000
+						</p>
+					</div>
 
-          <GridItem colSpan={{ base: 2, md: 2, lg: 1 }}>
-            <Flex
-              w="100%"
-              direction="column"
-              gap="4"
-              align={{ lg: "start", md: "center", base: "center" }}
-            >
-              <Heading display={{ base: "none", lg: "flex" }} fontSize="1.375rem" mb={1} color="primary">
-                APARBS Soluções Automotivas
-              </Heading>
+					{/* APARBS Soluções Automotivas */}
+					<div className="flex flex-col col-span-2 lg:col-span-1 justify-center items-center gap-4">
+						<h4 className="text-2xl mb-1 text-primary font-bold">
+							APARBS Soluções Automotivas
+						</h4>
 
-              <Image
-                width={150}
-                height={80}
-                src="/Aparbs Dark 3.svg" alt="APARBS Soluções Automotivas" />
+						<div className="w-full items-center justify-center flex flex-col lg:flex-col md:flex-row gap-4">
+							<Image
+								width={150}
+								height={80}
+								src="/Aparbs Dark 3.svg"
+								alt="APARBS Soluções Automotivas"
+							/>
 
-              <Text fontFamily="Hind" fontSize="14px">
-                Há mais de 25 anos no mercado atendendo com qualidade,
-                <br /> garantindo eficiência em serviços automotivos.
-              </Text>
+							<div className="flex flex-col gap-4">
+								<p className="text-sm max-w-60 text-center md:text-left">
+									Há mais de 25 anos no mercado atendendo com qualidade,
+									garantindo eficiência em serviços automotivos.
+								</p>
 
-              <Flex>
-                <LinkIcons theme="bgBlack" />
-              </Flex>
-            </Flex>
-          </GridItem>
-        </Grid>
-      </Flex>
+								<LinkIcons theme="bgBlack" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
-      <Flex
-        py="4"
-        lineHeight={10}
-        borderTop="0.1px solid"
-        borderColor="gray.600"
-        w="100%"
-        align="center"
-        justify="center"
-      >
-        <Flex
-          w="100%"
-          maxW="1280px"
-          fontSize="sm"
-          align="center"
-          justify="space-between"
-          px={{ base: "8", md: "4", lg: "0" }}
-          direction={{ lg: "row", md: "row", base: "column" }}
-        >
-          <Text color="terciary" fontWeight="300">
-            Copyright © {currentYear}
-            <Link
-              href="#"
-              ml="0.5rem"
-              fontWeight="600"
-              target="_blank"
-              _focus={{ border: "none" }}
-              _hover={{ textDecoration: "none", color: "primary" }}
-            >
-              APARBS Soluções Automotivas
-            </Link>
-          </Text>
+			<div className="flex w-full py-4 leading-10 border-t  border-zinc-600 items-center justify-center">
+				<div className="flex w-full max-w-[1280px] text-sm items-center justify-between flex-col md:flex-row px-4 gap-4">
+					<p className="font-light">
+						Copyright © {currentYear} {" "}
+						<Link href="/" className="font-semibold hover:text-primary transition">
+							APARBS Soluções Automotivas
+						</Link>
+					</p>
 
-          <Link href="https://www.isaacmarcos.com.br" target="_blank" _hover={{ textDecoration: "none" }}>
-            <Flex align="center" justify="center" border="1px solid" borderColor="#1e293b" w="270px" borderRadius="md" bg="#0f172a" _hover={{bg: "#334155"}} textColor="white" transition="0.2s"
-            className="flex items-center h-8 w-[270px] rounded border border-slate-800 hover:border-yellow-500 shadow bg-slate-900 hover:bg-slate-800">
-              <Text>
-                Construído por Isaac
-              </Text>
-              <Text fontWeight="600">Marcos</Text>
-            </Flex>
-          </Link>
-        </Flex>
-      </Flex>
-    </Flex>
-  );
+					<Link href="https://www.isaacmarcos.com.br" target="_blank" rel="noreferrer">
+						<div className="flex justify-center items-center h-8 w-[270px] rounded border border-zinc-800 hover:border-yellow-500 shadow bg-zinc-900 hover:bg-zinc-800 transition">
+							<p>Construído por Isaac</p>
+							<p className="font-semibold">Marcos</p>
+						</div>
+					</Link>
+				</div>
+			</div>
+		</div>
+	);
 }
