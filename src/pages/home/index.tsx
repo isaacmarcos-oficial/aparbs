@@ -9,44 +9,44 @@ import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
 import { client } from "../../lib/datoClient";
 import { GET_PARTNERS } from "../../lib/queries";
+import Teste from "./_components/teste";
 
 export async function getStaticProps() {
-  try {
-    const data = await client.request(GET_PARTNERS);
+	try {
+		const data = await client.request(GET_PARTNERS);
 
-    if (!data || !data.allPartners) {
-      throw new Error('');
-    }
+		if (!data || !data.allPartners) {
+			throw new Error("");
+		}
 
-    return {
-      props: {
-        partners: data.allPartners,
-      },
-    };
-  } catch (error) {
-    return {
-      props: {
-        partners: [],
-      },
-    };
-  }
+		return {
+			props: {
+				partners: data.allPartners,
+			},
+		};
+	} catch (error) {
+		return {
+			props: {
+				partners: [],
+			},
+		};
+	}
 }
 
 export default function Home({ partners }) {
-  
-  return (
-    <Flex direction="column" align="center" justify="center">
-      <Flex w="100%">
-        <Header />
-      </Flex>
-      <Hero />
-      <Destaque/>
-      <About />
-      <Offices />
-      <Contact />
-      <Parceiros partners={partners} />
-      <Footer />
-    </Flex>
-  );
+	return (
+		<div className="column items-center justify-center">
+			<div className="w-full">
+				<Header />
+      </div>
+			<Hero />
+			<Teste />
+			<Destaque />
+			<About />
+			<Offices />
+			<Contact />
+			<Parceiros partners={partners} />
+			<Footer />
+		</div>
+	);
 }
-

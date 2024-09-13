@@ -1,4 +1,14 @@
-module.exports = {
+/** @type {import('next').NextConfig} */
+
+const nextConfig = {
+  reactStrictMode: true,
+  webpack: (config) => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@': __dirname,
+    };
+    return config;
+  },
   images: {
     domains: ['res.cloudinary.com', "www.datocms-assets.com"],
   },
@@ -12,3 +22,5 @@ module.exports = {
     ];
   },
 }
+
+module.exports = nextConfig

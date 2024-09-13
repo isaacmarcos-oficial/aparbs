@@ -1,170 +1,84 @@
-import {
-  Text,
-  Drawer,
-  DrawerCloseButton,
-  DrawerContent,
-  DrawerHeader,
-  DrawerOverlay,
-  Flex,
-  useDisclosure,
-  DrawerBody,
-  Box,
-  Icon,
-  Heading,
-  Button,
-  Link,
-} from "@chakra-ui/react";
-import React from "react";
-import { ImMenu } from "react-icons/im";
 import { LinkIcons } from "../LinkIcons";
 import Image from "next/image";
+import {
+	Drawer,
+	DrawerContent,
+	DrawerDescription,
+	DrawerHeader,
+	DrawerTrigger,
+	DrawerFooter,
+	DrawerClose,
+} from "@/components/ui/drawer";
+import { Menu, X } from "lucide-react";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export function Sidebar() {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const btnRef = React.useRef();
+	return (
+		<Drawer direction="left">
+			<DrawerTrigger asChild>
+				<Menu size={25} className="text-terciary cursor-pointer" />
+			</DrawerTrigger>
+			<DrawerContent className="h-screen w-[450px] bg-primary border-r-4 border-r-[#850000] text-terciary ">
+				<div className="flex w-full justify-end pr-4 ">
+					<DrawerClose className="_hover:text-secundary">
+						<X className="hover:text-secundary transition-colors"  size={20} />
+					</DrawerClose>
+				</div>
 
-  return (
-    <Flex color="terciary">
-      <Box onClick={onOpen} _hover={{ color: "secundary" }} cursor="pointer">
-        <a ref={btnRef} href="#" aria-label="Abrir menu">
-          <Icon as={ImMenu} boxSize="20px" />
-        </a>
-      </Box>
-      <Drawer
-        isOpen={isOpen}
-        onClose={onClose}
-        placement="left"
-        finalFocusRef={btnRef}
-        size="sm"
-      >
-        <DrawerOverlay />
-        <DrawerContent
-          bgColor="primary"
-          color="terciary"
-          h="100%"
-          borderRight="4px"
-          borderColor="primary"
-          borderStyle="outset"
-        >
-          <DrawerCloseButton color="secundary" _hover={{ bg:"none", color:"terciary" }} />
-          <DrawerHeader>
-            <Flex align="center" justify="center" mt="60px">
-              <Image
-                width={150}
-                height={100}
-                src="/Aparbs Dark 3.svg"
-                alt="APARBS Soluções Automotivas" />
-            </Flex>
-          </DrawerHeader>
-          <DrawerBody>
-            <Flex
-              direction="column"
-              align="center"
-              justify="center"
-              px="40px"
-              w="100%"
-              mb="48px"
-            >
-              <Text
-                w="100%"
-                fontSize="14px"
-                textTransform="uppercase"
-                textAlign="center"
-                letterSpacing=".1187rem"
-                lineHeight="21px"
-                fontStyle="oblique"
-                mb="48px"
-              >
-                O CENTRO AUTOMOTIVO QUE <br /> SEU CARRO SE SENTE SEGURO
-              </Text>
+				<div className="flex flex-col justify-between items-center px-16">
+					<DrawerHeader className="w-full items-center justify-center gap-8">
+						<div className="flex flex-col w-full items-center justify-center">
+							<Image
+								width={150}
+								height={100}
+								src="/Aparbs Dark 3.svg"
+								alt="APARBS Soluções Automotivas"
+							/>
+						</div>
+						<DrawerDescription className="flex w-full text-sm uppercase text-center tracking-[0.1187rem] left-5 italic">
+							O Centro Automotivo que <br /> seu carro se sente seguro
+						</DrawerDescription>
+					</DrawerHeader>
 
-              <Flex direction="column" w="100%" align="center" mb="48px">
-                <Text
-                  color="terciary"
-                  w="100%"
-                  fontWeight="bold"
-                  mb="12px"
-                  fontSize="24px"
-                  letterSpacing="1.6px"
-                  align="center"
-                >
-                  Fale Conosco
-                </Text>
+					<div className="flex flex-col w-full items-center justify-center gap-3 my-10">
+						<p className="flex items-center justify-center w-full font-bold text-2xl tracking-[1.6px]">
+							Fale Conosco
+						</p>
 
-                <Flex mb="32px" gap="16px">
-                  <LinkIcons theme="bgRed" />
-                </Flex>
-              </Flex>
+						<LinkIcons theme="bgRed" />
+					</div>
 
-              <Flex
-                w="100%"
-                bgColor="terciary"
-                py="16px"
-                borderRadius="48px 0px 48px 0px "
-              >
-                <Text
-                  w="100%"
-                  fontWeight="600"
-                  fontSize="md"
-                  textAlign="center"
-                  letterSpacing="1.6px"
-                  color="secundary"
-                >
-                  Venha tomar <br /> um café conosco!
-                </Text>
-              </Flex>
+					<div className="mt-10 w-full">
+						<div className="items-center justify-center bg-terciary py-4 text-secundary rounded-ss-[48px] rounded-br-[48px]">
+							<p className="w-full font-bold text-lg text-center tracking-[1.6px]">
+								Venha tomar <br /> um café conosco!
+							</p>
+						</div>
+						<Link className="100%" href="/blog">
+							<Button className="w-full h-[40px] mt-7 bg-terciary text-secundary">
+								Conheça nosso blog
+							</Button>
+						</Link>
 
-              <Link href="/blog" w="100%">
-                <Button w="100%" mt="1.875rem">
-                  Conheça nosso blog
-                </Button>
-              </Link>
+						<DrawerFooter className="flex-grow mt-auto w-full text-left px-0">
+							<h3 className="font-bold tracking-[1.6px]">Porteirinha/MG</h3>
+							<p className="font-300 tracking-[1.6px] text-sm">
+								Avenida Dalton Cunha, 201 <br />
+								Bairro Eldorado <br />
+							</p>
 
-              <Heading
-                w="100%"
-                mt="1.875rem"
-                fontWeight="800"
-                fontSize="md"
-                letterSpacing="1.6px"
-                color="terciary"
-              >
-                Porteirinha/MG
-              </Heading>
-              <Text
-                w="100%"
-                mt=".25rem"
-                fontWeight="300"
-                fontSize="sm"
-                letterSpacing="1.6px"
-              >
-                Avenida Dalton Cunha, 201 <br />
-                Bairro Eldorado <br />
-              </Text>
-
-              <Heading
-                w="100%"
-                mt="1.875rem"
-                fontWeight="800"
-                fontSize="md"
-                letterSpacing="1.6px"
-                color="terciary"
-              >
-                Riacho dos Machados/MG
-              </Heading>
-              <Text
-                w="100%"
-                mt=".25rem"
-                fontWeight="300"
-                fontSize="sm"
-                letterSpacing="1.6px"
-              >
-                Avenida Salviana Alves da Cruz, 70 <br />
-                Bairro Lourdes <br />
-              </Text>
-            </Flex>
-          </DrawerBody>
-        </DrawerContent>
-      </Drawer>
-    </Flex>
-  );
+							<h3 className="font-bold tracking-[1.6px] mt-6">
+								Riacho dos Machados/MG
+							</h3>
+							<p className="font-300 tracking-[1.6px] text-sm">
+								Avenida Salviana Alves da Cruz, 70 <br />
+								Bairro Lourdes <br />
+							</p>
+						</DrawerFooter>
+					</div>
+				</div>
+			</DrawerContent>
+		</Drawer>
+	);
 }
