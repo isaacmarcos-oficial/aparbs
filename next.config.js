@@ -11,7 +11,7 @@ module.exports = {
       },
       {
         source: '/trabalhe-conosco',
-        destination: 'https://forms.gle/sg7qJpLmo2n85KFk8',
+        destination: 'https://forms.gle/3b4RPCroYB7rTgvPA',
         permanent: false,
       }
     ];
