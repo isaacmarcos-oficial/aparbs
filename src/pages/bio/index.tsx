@@ -91,7 +91,7 @@ export default function Bio() {
 
           <LinkBio
             title="Trabalhe conosco"
-            adress="https://forms.gle/r869Qa7dZvVZHHhd8"
+            adress="/trabalhe-conosco"
             iconLink={AiOutlineSolution }
           />
         </Flex>

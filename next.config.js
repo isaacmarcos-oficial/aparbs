@@ -9,6 +9,11 @@ module.exports = {
         destination: '/home',
         permanent: true,
       },
+      {
+        source: '/trabalhe-conosco',
+        destination: 'https://forms.gle/sg7qJpLmo2n85KFk8',
+        permanent: false,
+      }
     ];
   },
 }
