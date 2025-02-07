@@ -140,27 +140,6 @@ export function Sidebar() {
                 Avenida Dalton Cunha, 201 <br />
                 Bairro Eldorado <br />
               </Text>
-
-              <Heading
-                w="100%"
-                mt="1.875rem"
-                fontWeight="800"
-                fontSize="md"
-                letterSpacing="1.6px"
-                color="terciary"
-              >
-                Riacho dos Machados/MG
-              </Heading>
-              <Text
-                w="100%"
-                mt=".25rem"
-                fontWeight="300"
-                fontSize="sm"
-                letterSpacing="1.6px"
-              >
-                Avenida Salviana Alves da Cruz, 70 <br />
-                Bairro Lourdes <br />
-              </Text>
             </Flex>
           </DrawerBody>
         </DrawerContent>

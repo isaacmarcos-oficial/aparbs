@@ -6,7 +6,7 @@ export default class MyDocument extends Document {
   render() {
     const metas = {
       title: "APARBS Soluções Automotivas",
-      description: "Há mais de 25 anos no mercado atendendo com qualidade, garantindo eficiência em serviços automotivos em Porteirinha e Riacho dos Machados/MG.",
+      description: "Há mais de 25 anos no mercado atendendo com qualidade, garantindo eficiência em serviços automotivos em Porteirinha",
       image: "/AparbsFront.jpg",
       keywords: "Oficina mecânica, Loja de peças, Autopeças, Serviços automotivos, Reparo de carros, Troca de óleo, Mecânico de automóveis, Suspensão de carro, Freios para carros, Escapamentos, Revisão automotiva, Diagnóstico de problemas mecânicos",
       url: "https://aparbs.com.br"

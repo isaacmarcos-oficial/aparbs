@@ -97,23 +97,6 @@ export default function Contact() {
                       APARBS Porteirinha/MG
                     </Text>
                   </Button>
-                  <Button
-                    as={Link}
-                    style={{ textDecoration: "none" }}
-                    href="https://www.google.com/maps/dir//APARBS+Solu%C3%A7%C3%B5es+Automotivas+-+Avenida+Salviana+Alves+da+Cruz,+70+-+Lourdes,+Riacho+dos+Machados+-+MG,+39529-000/@-16.0021619,-43.1143853,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x75237fd6501ef8f:0x6612bbf2e18cc73a!2m2!1d-43.044517!2d-16.0021732?hl=pt-br"
-                    target="_blank"
-                    leftIcon={<FaMapMarkerAlt />}
-                    bgColor="terciary"
-                    w="100%"
-                    mb="2"
-                    color="primary"
-                    _hover={{ color: "secundary" }}
-                    transition="0.3s"
-                  >
-                    <Text fontSize={{ base: "0.75rem", lg: "1rem" }}>
-                      APARBS Riacho dos Machados/MG
-                    </Text>
-                  </Button>
                 </Flex>
               </Flex>
             </GridItem>

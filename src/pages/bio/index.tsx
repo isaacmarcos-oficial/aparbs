@@ -78,12 +78,6 @@ export default function Bio() {
           />
 
           <LinkBio
-            title="APARBS Riacho dos Machados/MG"
-            adress="https://www.google.com/maps/dir//APARBS+Solu%C3%A7%C3%B5es+Automotivas+-+Avenida+Salviana+Alves+da+Cruz,+70+-+Lourdes,+Riacho+dos+Machados+-+MG,+39529-000/@-16.0021619,-43.1143853,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x75237fd6501ef8f:0x6612bbf2e18cc73a!2m2!1d-43.044517!2d-16.0021732?hl=pt-br"
-            iconLink={HiMapPin}
-          />
-
-          <LinkBio
             title="APARBS Transportes"
             adress="https://api.whatsapp.com/send?phone=5538999944889&text=Olá%2C estou no site da APARBS. Gostaria de receber atendimento"
             iconLink={BsTruckFlatbed}
